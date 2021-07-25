@@ -31,7 +31,7 @@ function experience()
 }
 function back()
 {
-    window.open("Index.html", "_self");
+    window.open("index.html", "_self");
 }
 
 function contact(type)
