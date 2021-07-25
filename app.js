@@ -57,3 +57,8 @@ function gitHub()
 {
     window.open("https://github.com/T-Stolf");
 }
+
+function blackjack()
+{
+    window.open("/BlackJack/blackjack.html", "_self");
+}

@@ -49,9 +49,9 @@ button:hover
         border-radius: 5%;
         background: rgba(190, 189, 189, 0.76);
 }
-.header
+/* .header
 {
-}
+} */
 .colourTransparent
 {
     background: rgba(161, 161, 161, 0.425) ;
@@ -116,18 +116,22 @@ button:hover
 .I1
 {
     grid-area: 1 / 2 / span 1 / span 1;
+    text-align: center;
 }
 .I2
 {
     grid-area: 2 / 2 / span 1 / span 1;
+    text-align: center;
 }
 .I3
 {
     grid-area: 3 / 2 / span 1 / span 1;
+    text-align: center;
 }
 .I4
 {
     grid-area: 4 / 2 / span 1 / span 1;
+    text-align: center;
 }
 .mainButtons
 {
