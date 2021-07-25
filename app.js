@@ -39,7 +39,7 @@ function contact(type)
     switch(type)
     {
         case 0:
-            window.open("tel:16-434-6088", "_self");
+            window.open("tel:1-416-434-6088", "_self");
             break;
         case 2:
             window.open("https://discord.gg/zmdPaKqkZS", "_self");

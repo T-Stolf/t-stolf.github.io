@@ -20,7 +20,11 @@ css
 body{
     display: grid;
     grid-template-rows: auto;
+    grid-template-columns: auto;
+    gap: 3%;
+
     align-items: space-between;
+    justify-items: space-between;
     background: black;
     color: white;
     font-size: 3vw;
@@ -34,11 +38,12 @@ button
     border-width: 3px;
     border-radius: 5%;
     background: rgba(148, 146, 146, 0.76);
+    font-size: 1em;
 
 }
 button:hover
 {   
-        padding: 5% 5% 5% 5%;
+        padding: 1% 1% 1% 1%;
         border: solid rgb(197, 197, 197);
         border-width: 3px;
         border-radius: 5%;
@@ -59,12 +64,8 @@ button:hover
     grid-template-columns: 1fr 2fr ;
     grid-template-rows: 1fr 1fr;
     gap: 3%;
-    /* border: 3px solid rgb(255, 0, 0); */
     padding: 15px 10% 15px 10%;
     border-radius: 5%;
-    /* grid-template-areas:
-     "picture name"
-     "picture occupation"; */
     justify-items: center;
     align-items: center;
 } 
@@ -100,16 +101,16 @@ button:hover
 .mainsection
 {
     display: grid;
-    grid-template-columns: 1fr 10fr 1fr;
+    grid-template-columns: 1fr 14fr 1fr;
     grid-template-rows: auto;
     justify-content: space-between;
 
     gap: 3%;
 
-    margin: 15px 3% 15px 3%;
+    /* margin: 0 3% 0 3%; */
     border-radius: 5%;
 
-    justify-items: center;
+    justify-items: stretch;
     align-items: center;
 }
 .I1
@@ -131,7 +132,7 @@ button:hover
 .mainButtons
 {
     font-weight: 600;
-
+    border-radius: 3%;
 }
 .descriptor
 {
@@ -148,8 +149,8 @@ button:hover
 
     padding: 15px 3% 15px 3%;
 
-    align-items: center; 
-    justify-items:stretch;
+    align-items: stretch; 
+    justify-items: stretch;
 
     background: rgba(161, 161, 161, 0.425) ;
     padding: 15px 15px 15px 15px;
