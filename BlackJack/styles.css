@@ -3,15 +3,18 @@
     grid-template-rows: auto;
     justify-content: center;
     align-content: center;
+
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
     background-image: url("table.png");
     background-repeat:repeat;
     background-size: cover;
-    font-weight: bold;
+    font-weight: 700;
+
     color: white;
     text-align: center;
+
     margin: 15px 15px 0 15px;
-    font-size: 1vw;
+    font-size: 2.5vw;
 }
 .title
 {
@@ -26,7 +29,7 @@
 .title .txt
 {
     grid-area: 1 / 1 / span 1 / span 3;
-    font-size: 1em;
+    font-size: 0.8em;
 }
 .jackblack
 {
@@ -54,7 +57,7 @@
     align-self: center;
     grid-area: 7 / 1 / span 1 / span 1;
     font-weight: 700;
-    font-size: 1.5em;
+    font-size: 1.8em;
     align-self: center;
 }
 #hold
@@ -62,7 +65,7 @@
     align-content: center;
     grid-area: 7 / 3 / span 1 / span 1;
     font-weight: 700;
-    font-size: 1.5em;
+    font-size: 1.8em;
     align-self: center;
 }
 #start
@@ -71,29 +74,29 @@
 
     grid-area: 7 / 2 / span 1 / span 1;
     font-weight: 700;
-    font-size: 1.5em;
+    font-size: 1.8em;
 }
 
 #yoursum
 {
     color: goldenrod;
-    font-size: 3em;
+    font-size: 4em;
     grid-area: 5 / 1 / span 1 / span 3;
 }
 #playerSum
 {
     color: goldenrod;
-    font-size: 2em;
+    font-size: 3em;
     grid-area: 6 / 1 / span 1 / span 3;
 }
 #yourcards{
     color: goldenrod;
-    font-size: 4em;
+    font-size: 4.5em;
     grid-area: 1 / 1 / span 2 / span 3;
 }
 #playerHand {
     color: goldenrod;
-    font-size: 2.5em;
+    font-size: 3.5em;
     grid-area: 3 / 1 / span 2 / span 3;
 }
 
@@ -118,8 +121,6 @@ button {
     margin-top: 2px;
     width: 25vw;
     height: 6vh;
-    /* min-width: 150px;
-    min-height: 50px; */
     transition: background 0.5s ease;
 }
 button:hover
@@ -137,5 +138,6 @@ button:hover
 }
 .back
 {
+    font-size: 1.8em;
     justify-content: center;
 }
