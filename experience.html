@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="content in work">
-    <title>Experience</title>
+    <title>Document</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
     <header class="header"> <!-- header is used for headers, nav is used for navigation bar-->
         <div class="colourTransparent">
             <div class="internalstuff">
-                <img src="imgs\temp.png" alt="photo of me"> 
+                <img src="imgs\me.jpeg" alt="photo of me"> 
                 <div class="name">Thomas Stolf</div>
                 <!-- <hr> horizontal line / horizontal rule -->
                 <div class="occupation topandbotlines">Software Engineer / Video Editor</div> 
@@ -35,34 +35,32 @@
     </section>
 
     <section class="back">
-        <button id="goback">
-            <a href="index.html">back</a>
+        <button id="goback" onclick="back()">
+            Back
         </button>
     </section>
     
     <div class="contactbar">
         <p class="contactname">Contact:</p>
-        <button class="contactButton" id="phone"> 
-            <!-- <a href="Index.html"> </a> -->
+        <button class="contactButton" id="phone" onclick="contact(0)"> 
             <img src="imgs\phone.png" alt="phone">
         </button>
 
-        <button class="contactButton" id="email">
-            <!-- <a href="Index.html"> </a> -->
+        <button class="contactButton" id="email" onclick="contact(1)">
             <img src="imgs\gmail.png" alt="Gmail">
         </button>
 
-        <button class="contactButton" id="discord">
-            <!-- <a href="Index.html"> </a> -->
+        <button class="contactButton" id="discord" onclick="contact(2)">
             <img src="imgs\discord.png" alt="discord">
         </button>
     </div>
-    
+
     <script src="app.js">
     </script>
     <noscript>
         You need Javascript installed to fully experience this site
     </noscript>
+    
 
 </body>
 </html>

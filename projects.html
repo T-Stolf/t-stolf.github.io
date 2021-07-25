@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="content in work">
-    <title>Projects</title>
+    <title>Document</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -14,7 +14,7 @@
     <header class="header"> <!-- header is used for headers, nav is used for navigation bar-->
         <div class="colourTransparent">
             <div class="internalstuff">
-                <img src="imgs\temp.png" alt="photo of me"> 
+                <img src="imgs\me.jpeg" alt="photo of me"> 
                 <div class="name">Thomas Stolf</div>
                 <!-- <hr> horizontal line / horizontal rule -->
                 <div class="occupation topandbotlines">Software Engineer / Video Editor</div> 
@@ -25,11 +25,9 @@
     <section class="mainsection">
 
             <p class="I1">Videos</p>
-            <p class="p1"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus ultricies tristique nulla aliquet. Mauris vitae ultricies leo integer malesuada nunc. Pulvinar mattis nunc sed blandit. Pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus. Volutpat lacus laoreet non curabitur gravida arcu. Tristique nulla aliquet enim tortor at auctor urna nunc. Pellentesque habitant morbi tristique senectus et netus. Aliquam ultrices sagittis orci a scelerisque purus. Nisl suscipit adipiscing bibendum est ultricies integer quis. Auctor urna nunc id cursus metus aliquam eleifend.
-                <span>
-                 <iframe src="https://www.youtube.com/embed/3mmGa_zX96A" frameborder="0" scrolling="yes" allowfullscreen="true">...</iframe>
-                </span>
-            </p>
+            <p class="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus ultricies tristique nulla aliquet. Mauris vitae ultricies leo integer malesuada nunc. Pulvinar mattis nunc sed blandit. Pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus. Volutpat lacus laoreet non curabitur gravida arcu. Tristique nulla aliquet enim tortor at auctor urna nunc. Pellentesque habitant morbi tristique senectus et netus. Aliquam ultrices sagittis orci a scelerisque purus. Nisl suscipit adipiscing bibendum est ultricies integer quis. Auctor urna nunc id cursus metus aliquam eleifend.</p>
+
+            <iframe src="https://www.youtube.com/embed/3mmGa_zX96A" frameborder="0" scrolling="yes" allowfullscreen="true">...</iframe>
 
             <p class="I2">Game Development</p>
             <p class="p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus ultricies tristique nulla aliquet. Mauris vitae ultricies leo integer malesuada nunc. Pulvinar mattis nunc sed blandit. Pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus. Volutpat lacus laoreet non curabitur gravida arcu. Tristique nulla aliquet enim tortor at auctor urna nunc. Pellentesque habitant morbi tristique senectus et netus. Aliquam ultrices sagittis orci a scelerisque purus. Nisl suscipit adipiscing bibendum est ultricies integer quis. Auctor urna nunc id cursus metus aliquam eleifend.</p>
@@ -37,32 +35,29 @@
             <p class="I3">Code</p>
             <p class="p3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus ultricies tristique nulla aliquet. Mauris vitae ultricies leo integer malesuada nunc. Pulvinar mattis nunc sed blandit. Pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus. Volutpat lacus laoreet non curabitur gravida arcu. Tristique nulla aliquet enim tortor at auctor urna nunc. Pellentesque habitant morbi tristique senectus et netus. Aliquam ultrices sagittis orci a scelerisque purus. Nisl suscipit adipiscing bibendum est ultricies integer quis. Auctor urna nunc id cursus metus aliquam eleifend.</p>
   
-            <button class="mainButtons I4"> <a href="https://github.com/T-Stolf" target="_blank"> Other </a> </button>
+            <button class="mainButtons I4" onclick="gitHub()">Other</button>
             <p class="p4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus ultricies tristique nulla aliquet. Mauris vitae ultricies leo integer malesuada nunc. Pulvinar mattis nunc sed blandit. Pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus. Volutpat lacus laoreet non curabitur gravida arcu. Tristique nulla aliquet enim tortor at auctor urna nunc. Pellentesque habitant morbi tristique senectus et netus. Aliquam ultrices sagittis orci a scelerisque purus. Nisl suscipit adipiscing bibendum est ultricies integer quis. Auctor urna nunc id cursus metus aliquam eleifend.</p>
     
         </section>
 
-    <section class="back">
-        <button id="goback">
-            <a href="index.html">back</a>
-        </button>
-    </section>
+        <section class="back">
+            <button id="goback" onclick="back()">
+                Back
+            </button>
+        </section>
 
 
     <div class="contactbar">
         <p class="contactname">Contact:</p>
-        <button class="contactButton" id="phone"> 
-            <!-- <a href="Index.html"> </a> -->
+        <button class="contactButton" id="phone" onclick="contact(0)"> 
             <img src="imgs\phone.png" alt="phone">
         </button>
 
-        <button class="contactButton" id="email">
-            <!-- <a href="Index.html"> </a> -->
+        <button class="contactButton" id="email" onclick="contact(1)">
             <img src="imgs\gmail.png" alt="Gmail">
         </button>
 
-        <button class="contactButton" id="discord">
-            <!-- <a href="Index.html"> </a> -->
+        <button class="contactButton" id="discord" onclick="contact(2)">
             <img src="imgs\discord.png" alt="discord">
         </button>
     </div>
@@ -72,6 +67,6 @@
     <noscript>
         You need Javascript installed to fully experience this site
     </noscript>
-
+    
 </body>
 </html>
