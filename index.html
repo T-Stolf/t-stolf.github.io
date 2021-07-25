@@ -13,8 +13,8 @@
 
     <header class="header"> <!-- header is used for headers, nav is used for navigation bar-->
         <div class="colourTransparent">
-            <div class="internalstuff">
-                <img src="imgs\me.jpeg" alt="photo of me"> 
+            <div class="internalStuff">
+                <img class="meImage" src="imgs\me.jpeg" alt="photo of me"> 
                 <div class="name">Thomas Stolf</div>
                 <!-- <hr> horizontal line / horizontal rule -->
                 <div class="occupation topandbotlines">Software Engineer / Video Editor</div> 
@@ -24,14 +24,15 @@
 
     <!-- list of details -->
     <section class="mainsection">       
-             <button class="mainButtons I1" onclick="aboutme()" > About Me </button>
-             <p class="p1"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus ultricies tristique nulla aliquet. Mauris vitae ultricies leo integer malesuada nunc. Pulvinar mattis nunc sed blandit. Pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus. Volutpat lacus laoreet non curabitur gravida arcu. Tristique nulla aliquet enim tortor at auctor urna nunc. Pellentesque habitant morbi tristique senectus et netus. Aliquam ultrices sagittis orci a scelerisque purus. Nisl suscipit adipiscing bibendum est ultricies integer quis. Auctor urna nunc id cursus metus aliquam eleifend. </p>
-           
-             <button class="mainButtons I2" onclick="projects()"> Projects  </button>
-             <p class="p2"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus ultricies tristique nulla aliquet. Mauris vitae ultricies leo integer malesuada nunc. Pulvinar mattis nunc sed blandit. Pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus. Volutpat lacus laoreet non curabitur gravida arcu. Tristique nulla aliquet enim tortor at auctor urna nunc. Pellentesque habitant morbi tristique senectus et netus. Aliquam ultrices sagittis orci a scelerisque purus. Nisl suscipit adipiscing bibendum est ultricies integer quis. Auctor urna nunc id cursus metus aliquam eleifend. </p>
-
-             <button class="mainButtons I3" onclick="experience()">  Experience </button>
-             <p class="p3"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus ultricies tristique nulla aliquet. Mauris vitae ultricies leo integer malesuada nunc. Pulvinar mattis nunc sed blandit. Pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus. Volutpat lacus laoreet non curabitur gravida arcu. Tristique nulla aliquet enim tortor at auctor urna nunc. Pellentesque habitant morbi tristique senectus et netus. Aliquam ultrices sagittis orci a scelerisque purus. Nisl suscipit adipiscing bibendum est ultricies integer quis. Auctor urna nunc id cursus metus aliquam eleifend. </p>
+             <button class="mainButtons I1" onclick="aboutme()"> <p class="descriptor">About Me</p> 
+                <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis, vel deserunt alias pariatur voluptas iure!</span>
+            </button>
+             <button class="mainButtons I2" onclick="projects()"> <p class="descriptor">Projects</p> 
+                <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis, vel deserunt alias pariatur voluptas iure!</span>  
+            </button>
+             <button class="mainButtons I3" onclick="experience()"> <p class="descriptor">Experience</p> 
+                <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis, vel deserunt alias pariatur voluptas iure!</span>
+             </button>
     </section>
 
     <br>
