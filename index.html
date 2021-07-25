@@ -4,28 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JackBlack</title>
+    <meta name="description" content="content in work">
+    <title>Stolf</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
 
-    <div class="title">
-        <img src="jackblack.jpg" class="jackblack"> <span class="txt"> JackBlack </span> <img src="jackblack.jpg" class="jackblack">
+<body class="body">
+
+    <header class="header"> <!-- header is used for headers, nav is used for navigation bar-->
+        <div class="colourTransparent">
+            <div class="internalstuff">
+                <img src="imgs\temp.png" alt="photo of me"> 
+                <div class="name">Thomas Stolf</div>
+                <!-- <hr> horizontal line / horizontal rule -->
+                <div class="occupation topandbotlines">Software Engineer / Video Editor</div> 
+            </div>
+        </div>   
+    </header>
+
+    <!-- list of details -->
+    <section class="mainsection">       
+             <button class="mainButtons I1"> <a href="aboutme.html"> About Me </a> </button>
+             <p class="p1"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus ultricies tristique nulla aliquet. Mauris vitae ultricies leo integer malesuada nunc. Pulvinar mattis nunc sed blandit. Pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus. Volutpat lacus laoreet non curabitur gravida arcu. Tristique nulla aliquet enim tortor at auctor urna nunc. Pellentesque habitant morbi tristique senectus et netus. Aliquam ultrices sagittis orci a scelerisque purus. Nisl suscipit adipiscing bibendum est ultricies integer quis. Auctor urna nunc id cursus metus aliquam eleifend. </p>
+           
+             <button class="mainButtons I2"> <a href="projects.html"> Projects </a> </button>
+             <p class="p2"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus ultricies tristique nulla aliquet. Mauris vitae ultricies leo integer malesuada nunc. Pulvinar mattis nunc sed blandit. Pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus. Volutpat lacus laoreet non curabitur gravida arcu. Tristique nulla aliquet enim tortor at auctor urna nunc. Pellentesque habitant morbi tristique senectus et netus. Aliquam ultrices sagittis orci a scelerisque purus. Nisl suscipit adipiscing bibendum est ultricies integer quis. Auctor urna nunc id cursus metus aliquam eleifend. </p>
+
+             <button class="mainButtons I3"> <a href="experience.html"> Experience </a></button>
+             <p class="p3"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus ultricies tristique nulla aliquet. Mauris vitae ultricies leo integer malesuada nunc. Pulvinar mattis nunc sed blandit. Pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus. Volutpat lacus laoreet non curabitur gravida arcu. Tristique nulla aliquet enim tortor at auctor urna nunc. Pellentesque habitant morbi tristique senectus et netus. Aliquam ultrices sagittis orci a scelerisque purus. Nisl suscipit adipiscing bibendum est ultricies integer quis. Auctor urna nunc id cursus metus aliquam eleifend. </p>
+    </section>
+
+    <br>
+
+    <div class="contactbar">
+                <p class="contactname">Contact:</p>
+                <button class="contactButton" id="phone"> 
+                    <!-- <a href="Index.html"> </a> -->
+                    <img src="imgs\phone.png" alt="phone">
+                </button>
+
+                <button class="contactButton" id="email">
+                    <!-- <a href="Index.html"> </a> -->
+                    <img src="imgs\gmail.png" alt="Gmail">
+                </button>
+
+                <button class="contactButton" id="discord">
+                    <!-- <a href="Index.html"> </a> -->
+                    <img src="imgs\discord.png" alt="discord">
+                </button>
     </div>
-
-    <div class="gamearea">
-        <div id="yourcards">Your Cards: </div>
-        <div id="playerHand"></div>
-        <div id="yoursum">Sum:</div>
-        <div id="playerSum"></div>
-        <button id="draw" onclick="draw()">Draw
-        </button>
-        <button id="hold" onclick="hold()">Hold
-        </button>
-        <p id="win"></p>
-        <button id="start" onclick="startGame()">Start Game</button>
-    </div>
-
-    <script src="blackjack.js"></script>
+    
+    <script src="app.js">
+    </script>
+    <noscript>
+        You need Javascript installed to fully experience this site
+    </noscript>
+    
 </body>
 </html>

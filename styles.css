@@ -1,134 +1,212 @@
+css
+:root{
+    --blue: rgb(1, 40, 77);
+}*{
+    font-family: helvetica;
+  }
+  /* collector combinations, select for things with 2 classes or a class and an id, .header.name{} or #cube.id HTMP selectors can be used in any combination */
+  /* having 2 selectors with the same properties can be written together using a comma as such .heavy, .weight{} including the comma and space*/
+  /* position has different types: static, relative, absolute, fixed, and sticky. fixed keeps items in the spot on screen forever, whereas sticky attaches to a position on the screen.*/
+  /* pseudoselectors are used to add more dynamic reactions to an element. to add them put a : after a class or id, then add a descriptor such as nth child or link / visited */
+  /* sibling selectors "~" are used to denote a selector style that comes in an area with a sibling (meaning they are contained within a parent).  a ~ b { color: red;}  denotes any a following a sibling that is b is coloured red*/
+  /* follow selectors "+" are used to denote a selector style that comes immediately after another selector. a + b {color:red;} denotes any a following a b is coloured red*/
+  /* child selectors ">" are used to denote a selector style that applies to all children of a selector. a > b{color:red;} denotes any child b of a is coloured red */
+  /* descendant selectors " " are used to denote a selector syle that applies to any descendant selector. a b {colour:red;} denotes any descendant of a named b is coloured red*/
+  /* attribute selection can also be used to denote style. for example: a[class=something], div[id=dumb], img[src="temp.png"] all work to define specific items based on their attributes*/
+  /* attribute selection can be very powerful for styling multiple items contained in the same location (ie photos) when using the "^" symbol as it changes the form from "equals" to "contains" img[src =^"\image\"] will affect all items in the file image  */
+  /* attribute selectors can also contain: $-ends with, *-contains somewhere, ~-contains separated by whitespace, |-starts with, and ends with a "-" */
+  /* background size and background repeat, exactly what you expect*/
   
-body {
-    display:grid;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
-    background-image: url("table.png");
-    background-repeat:repeat;
-    background-size: cover;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    margin: 15px 15px 0 15px;
-}
-.title
-{
-    display:grid;
-    grid-template-rows: auto;
-    grid-template-columns: auto;
-    align-content: center;
-    gap: 15px;
-    justify-content: center;
-    align-items: center;
-}
-.title .txt
-{
-    grid-area: 1 / 1 / span 1 / span 3;
-}
-.jackblack
-{
+body{
     display: grid;
-    border:3px solid rgb(253, 74, 4);
-    border-radius: 10%;
-    grid-area: 2 / 2 / span 1 / span 1;
-    align-items: center;
-    justify-content: center;
-}
-.gamearea
-{
-    display:grid;
-    grid-template-rows: auto;
-    grid-template-columns: auto;
-    align-content: center;
-    gap: 15px;
-    justify-content: center;
-    align-items: center;
-    margin: 0 30% 0 30%;
-}
-#draw
-{
-    align-self: center;
-
-    grid-area: 7 / 1 / span 1 / span 1;
-    font-weight: 700;
-    font-size: 1.5em;
-    align-self: center;
-}
-#hold
-{
-    align-content: center;
-    grid-area: 7 / 2 / span 1 / span 1;
-    font-weight: 700;
-    font-size: 1.5em;
-    align-self: center;
-}
-#start
-{
-    align-self: center;
-
-    grid-area: 7 / 3 / span 1 / span 1;
-    font-weight: 700;
-    font-size: 1.5em;
+    background: black;
+    color: green;
+    font-size: large;
+    font-family: Arial;
+    margin: 0 0 0 0;
 }
 
-#yoursum
-{
-    color: goldenrod;
-    font-size: 3em;
-    grid-area: 5 / 1 / span 1 / span 3;
-}
-#playerSum
-{
-    color: goldenrod;
-    font-size: 2em;
-    grid-area: 6 / 1 / span 1 / span 3;
-}
-#yourcards{
-    color: goldenrod;
-    font-size: 4em;
-    grid-area: 1 / 1 / span 2 / span 3;
-}
-#playerHand {
-    color: goldenrod;
-    font-size: 2.5em;
-    grid-area: 3 / 1 / span 2 / span 3;
-}
-
-#win {
-    font-style: italic;
-    color: goldenrod;
-    font-size: 2.5em;
-    grid-area: 8 / 1 / span 1 / span 3;
-    width: 100%;
-    height: 100%;
-}
-
-button {
-
-    color: #016f32;
-    background: goldenrod;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-weight: bold;
+button{
+    color:black;
+    background:rgb(0, 182, 61);
+    outline: 0mm;
     border: none;
-    border-radius: 2px;
-    margin-bottom: 2px;
-    margin-top: 2px;
-    width: 100%;
-    height: 100%;
-    min-width: 150px;
-    min-height: 50px;
-    transition: background 0.5s ease;
+    transition: background 0.2s ease; /* what to transition, how long, how to do it (ease, linear, ease-in-out etc), wait before duration*/
 }
 button:hover
 {
-    color: #00ac4d;
-    background: rgb(255, 183, 0);
+    background-color: rgb(123, 255, 0);
+    padding: 10px 10px 10px 10px;
 }
-
-.title
-{
+.header{
+   height:250px;
+   background: url("imgs/discord.png");
+   background-size:contain;
+   background-repeat: no-repeat;
+   background-position: center;
+}
+.colourTransparent{    
+    width: 90%;
+    height: 100%;
+    background: rgba(1, 40, 77,0.8);
+    padding: 0 5% 0 5%;
+}
+.internalstuff{
+    display:grid;
+    grid-template-rows: 100px 100px;
+    grid-template-columns: auto;
+    align-content: space-around;
+    gap: 15px;
+    
+    justify-content: center;
+    width: 90%;
+    height: 100%;
+    padding: 0 5% 0 5%;
+   
+}
+.internalstuff .name{
+    font-size: 4em;
+    grid-area: 1 / 2 / span 1 /span 1;
+    align-self: center;
+    margin: 50px 0 0 0;
     font-weight: 700;
-    font-size: 10em;
-    color: rgb(253, 74, 4);
+    
+}
+.internalstuff .occupation{
+    font-size: x-large; 
+    grid-area: 2 / 2 / span 1 /span 1;
+    align-self: center;
+    font-weight: 600;
+}
+.internalstuff img{
+    border:3px solid black;
+    border-radius: 30%;
+    grid-area: 1 / 1 / span 2 /span 1;
+    align-self: center;
 
 }
+.mainButtons{
+    position: relative;
+    border: groove rgba(1, 40, 77, 1);
+    border-radius: 15px;
+}
+.back
+{
+    display: grid;
+    grid-template-rows: 50px;
+    grid-template-columns: 50px;
+    align-content: space-around;
+    justify-content: center;
+    padding:0 15px 15px 15px;
+}
+#goback{
+    border: black solid;
+    border-radius: 15px;
+}
+.contactbar{
+    display: grid;
+    padding:0 15px 0 15px;
+    
+    grid-template-rows: 100px;
+    grid-template-columns: auto;
+    align-content: space-around;
+    gap: 15px;
+
+    background: rgb(1, 40, 77); 
+    padding: 10px 10px 10px 10px;
+}
+.contactButton {
+    border: black solid;
+    background-color: rgb(0, 182, 61);
+    border-radius: 15px;
+    /* padding: 5px 5px 5px 5px; top right bot left */
+    margin: 0 0; /*top/bottom && left/right */
+}
+.contactname{
+    grid-area: 1 / 1 / span 1 /span 1;
+    align-self: center;
+    padding-left: 3%;
+    font-size: 2em;
+    font-weight: 600;
+}
+#phone{
+    grid-area: 1 / 2 / span 1 /span 1;
+    align-self: center;
+}
+#email{
+    grid-area: 1 / 3 / span 1 /span 1;
+    align-self: center;
+}
+
+#discord{
+    grid-area: 1 / 4 / span 1 /span 1;
+    align-self: center;
+}
+.topandbotlines{
+    border-bottom: 6px;
+    border-top: 6px;
+    border-left: 0;
+    border-right: 0;
+    border-style: solid;
+    border-color: black;
+}
+.mainsection{
+    padding:0 15px 0 15px;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 20% 80%;
+    gap: 15px;
+    align-content: space-around;
+    justify-content: center;
+}
+.p1{
+    grid-area: 1 / 2 / span 1 /span 1;
+    align-self: center;
+
+}
+.p2{
+    grid-area: 2 / 2 / span 1 /span 1;
+    align-self: center;
+
+}
+.p3{
+    grid-area: 3 / 2 / span 1 /span 1;
+    align-self: center;
+
+}
+.p4{
+    grid-area: 4 / 2 / span 1 /span 1;
+    align-self: center;
+
+}
+.I1{
+    grid-area: 1 / 1 / span 1 / span 1;
+    align-self: center;
+    font-weight: 600;
+    font-size: xx-large;
+    overflow-wrap: break-word;
+}
+.I2{
+    grid-area: 2 / 1 / span 1 /span 1;
+    align-self: center;
+    font-weight: 600;
+    font-size: xx-large;
+    overflow-wrap: break-word;
+
+}
+.I3{
+    grid-area: 3 / 1 / span 1 /span 1;
+    align-self: center;
+    font-weight: 600;
+    font-size: xx-large;
+    overflow-wrap: break-word;
+
+}
+.I4{
+    grid-area: 4 / 1 / span 1 /span 1;
+    align-self: center;
+    font-weight: 600;
+    font-size: xx-large;
+    overflow-wrap: break-word;
+}
+
