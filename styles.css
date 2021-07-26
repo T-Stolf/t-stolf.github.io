@@ -182,3 +182,17 @@ ul
     justify-items: center;
     align-items: center;
 }
+.Type
+{
+    text-decoration: underline;
+    font-size: 1.2em;
+    font-weight:700;
+}
+.Location
+{
+    font-weight:700;
+}
+.TimePeriod
+{
+    font-weight:600;   
+}

@@ -48,9 +48,11 @@ function reset()
 
 function draw()
 { 
+    document.querySelector("#yoursum").style.color = "goldenrod";
+    document.querySelector("#playerSum").style.color = "goldenrod";
     //player draws a card
     if(sum(player) <= 21 && dealerlose == false && playerlose == false)
-    {
+    {  
         player[player.length] = drawcard();
     }
     if(sum(player) == 21)
