@@ -39,6 +39,7 @@ button
     border-radius: 5%;
     background: rgba(148, 146, 146, 0.76);
     font-size: 1em;
+    transition: background 0.5s ease;
 
 }
 button:hover
@@ -168,6 +169,12 @@ ul
 {
     font-size: 1.3em;
     font-weight: 600;
+}
+.contactImg
+{
+    height: 80%;
+    width: 80%;
+
 }
 .back 
 {
