@@ -132,18 +132,36 @@ function drawcard()
     //get a random card from the deck
     let randomCardNum = Math.floor(Math.random() * (deck.length-1));
     let card = deck[randomCardNum];
+
     //remove the card from the deck and move the other cards;
     for(let i = randomCardNum; i < deck.length - 1; i++)
+    {
         deck[i] = deck[i+1];
+    }
+    deck.pop();
+
     return card;
 }
 //returns the sum of the "values" of each card
 function sum(hand)
-{
+{   let aces = [];
     let sum = 0;
     for(let i = 0; i < hand.length; i++)
     {
+        if(hand[i].value == 11)
+        {
+            aces.push(i);
+        }
         sum += hand[i].value;
+        if(sum > 21 && aces.length > 0)
+        {
+            let x = aces.pop();
+            hand[x].value = 1;
+            if(i <= x)
+            {
+                sum -= 10;
+            }
+        }
     }
     return sum;
 }
@@ -153,7 +171,7 @@ function showCards(player)
     let show = "";
     for(let i = 0; i < player.length; i++)
     {
-        show += player[i].name;
+        show += player[i].name;// + " : " + player[i].suit;
         if(i + 1 != player.length)
         {
             show += ", ";
@@ -161,6 +179,7 @@ function showCards(player)
     }
     return show;
 }
+
 //fills the deck with cards
 function setDeck()
 {
@@ -174,7 +193,7 @@ function setDeck()
     // }
 
     //for every card number Ace, 2..King
-    for(let i = 1; i < 14; i++)
+    for(let i = 1; i < 14; i++)//1 to 14
     {
         //for every suit spades, clubs, hearts, diamonds
         for(let j = 0; j < 4; j++)
@@ -182,7 +201,7 @@ function setDeck()
             //create a card and add it to the deck
             deck[deck.length] = makeCards(i,j);
             //check the card
-            console.log(deck[deck.length - 1]);
+            // console.log(deck[deck.length - 1]);
         }
     }
 }
@@ -237,6 +256,7 @@ function makeCards(num, suitNumber)
     {
         card.value = num;
     }
+    // console.log(card);
     return card;
 }
 function back()
