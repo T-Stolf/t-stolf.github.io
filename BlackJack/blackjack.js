@@ -1,22 +1,50 @@
-//  // suit: hearts = 0, diamonds = 1, spades = 2, clubs = 3
-//  //player: 0 = dealer 1...n = players
-//  let player = [drawcard(), drawcard()];
-//  let dealer = [drawcard(), drawcard()];
-// // console.log(player);
-// // console.log("player "  +  sum(player));
-
 let display = document.querySelector("#playerHand");
 let win = document.querySelector("#win");
 let playerSum = document.querySelector("#playerSum");
+
+let deck = [];
+
 document.querySelector("#hold").style.display = "none";
 document.querySelector("#draw").style.display = "none";
 document.querySelector("#yourcards").style.display = "none";
 document.querySelector("#yoursum").style.display = "none";
 
-// display.textContent = cards(player);
 
-// let playerlose = false;
-// let dealerlose = false;
+function startGame()
+{
+    setDeck();
+
+    player = [drawcard(), drawcard()];
+    dealer = [drawcard(), drawcard()];
+    
+    display.textContent = showCards(player);
+    playerSum.textContent = sum(player);
+    playerlose = false; 
+    dealerlose = false;
+    win.textContent = "";
+    //allows player to use the hold and draw buttons
+    reset();
+    //sets the players cards to green if their sum is 21
+    if(sum(player) == 21)
+    {
+        document.querySelector("#yoursum").style.color = "rgb(24, 61, 7)";
+        document.querySelector("#playerSum").style.color = "rgb(24, 61, 7)";
+    }
+
+}
+
+function reset()
+{
+    document.querySelector("#start").textContent = "Play Again?"
+    document.querySelector("#start").style.display = "none";
+    document.querySelector("#hold").style.display = "block";
+    document.querySelector("#draw").style.display = "block";
+    document.querySelector("#yourcards").style.display = "block";
+    document.querySelector("#yoursum").style.display = "block";
+    document.querySelector("#yoursum").style.color = "goldenrod";
+    document.querySelector("#playerSum").style.color = "goldenrod";
+    // deck = baseDeck;
+}
 
 function draw()
 { 
@@ -24,6 +52,11 @@ function draw()
     if(sum(player) <= 21 && dealerlose == false && playerlose == false)
     {
         player[player.length] = drawcard();
+    }
+    if(sum(player) == 21)
+    {
+        document.querySelector("#yoursum").style.color = "rgb(24, 61, 7)";
+        document.querySelector("#playerSum").style.color = "rgb(24, 61, 7)";
     }
     if(sum(player) > 21)
     {
@@ -36,28 +69,16 @@ function draw()
 
 function hold()
 {
-    //dealer draws untilreaching 19
+    //dealer draws until reaching 19
     if(playerlose == false)
     {
         while(sum(dealer) < 19)
         {
             dealer[dealer.length] = drawcard();
         }
-    winner();
+        winner();
     }
   
-}
-function startGame()
-{
-    player = [drawcard(), drawcard()];
-    dealer = [drawcard(), drawcard()];
-    display.textContent = showCards(player);
-    playerSum.textContent = sum(player);
-    playerlose = false; 
-    dealerlose = false;
-    win.textContent = "";
-
-    reset();
 }
 
 function winner()
@@ -90,61 +111,133 @@ function winner()
         win.textContent += " Dealer's hand: " + showCards(dealer); 
         playerlose = true;
     }
+
     document.querySelector("#start").style.display = "block";
     document.querySelector("#hold").style.display = "none";
     document.querySelector("#draw").style.display = "none";
 }
+
+//returns an array of cards given an input player
 function cards(player)
 {
     let cards = [];
     for(let i = 0; i < player.length; i++)
-        cards[i] = player[i].number;
+        cards[i] = player[i].value;
 
     return cards;
 }
 
 function drawcard()
 {
-    let card = { 
-        number: (Math.floor(Math.random() * 10) + 2), 
-        suit: (Math.floor(Math.random() * 4)) 
-        }
+    //get a random card from the deck
+    let randomCardNum = Math.floor(Math.random() * (deck.length-1));
+    let card = deck[randomCardNum];
+    //remove the card from the deck and move the other cards;
+    for(let i = randomCardNum; i < deck.length - 1; i++)
+        deck[i] = deck[i+1];
     return card;
 }
+//returns the sum of the "values" of each card
 function sum(hand)
 {
     let sum = 0;
     for(let i = 0; i < hand.length; i++)
     {
-        sum += hand[i].number;
+        sum += hand[i].value;
     }
     return sum;
 }
+// returns a string containing the "name"s of each card separated by commas
 function showCards(player)
 {
     let show = "";
     for(let i = 0; i < player.length; i++)
     {
-        show += player[i].number;
+        show += player[i].name;
         if(i + 1 != player.length)
         {
             show += ", ";
         }
-
     }
     return show;
 }
-
-function reset()
+//fills the deck with cards
+function setDeck()
 {
-    document.querySelector("#start").textContent = "Play Again?"
-    document.querySelector("#start").style.display = "none";
-    document.querySelector("#hold").style.display = "block";
-    document.querySelector("#draw").style.display = "block";
-    document.querySelector("#yourcards").style.display = "block";
-    document.querySelector("#yoursum").style.display = "block";
-    document.querySelector("#yoursum").style.color = "goldenrod";
-    document.querySelector("#playerSum").style.color = "goldenrod";
+    deck = [];
+    // for(let i = 2; i < 12; i++)
+    // {
+    //     for(let j = 0; j < 4; j++)
+    //     {
+    //         deck[deck.length] = {number: i , suit: j}
+    //     }
+    // }
+
+    //for every card number Ace, 2..King
+    for(let i = 1; i < 14; i++)
+    {
+        //for every suit spades, clubs, hearts, diamonds
+        for(let j = 0; j < 4; j++)
+        {
+            //create a card and add it to the deck
+            deck[deck.length] = makeCards(i,j);
+            //check the card
+            console.log(deck[deck.length - 1]);
+        }
+    }
+}
+//creates a card based on a "number" number and a "suit" number
+function makeCards(num, suitNumber)
+{
+    let card = {number:num, suit: "error", name: "error", value: 0};
+    switch (suitNumber)
+    {
+        case 0:
+            card.suit = "clubs";
+            break;
+        case 1:
+            card.suit = "spades";
+            break;
+        case 2:
+            card.suit = "diamonds";
+            break;
+        case 3:
+            card.suit = "hearts";
+        break;
+        default:
+            alert("error producing suit for a card. Please inform Thomas");
+    }
+    switch (num)
+    {
+        case 1:
+            card.name="Ace";
+            break;
+        case 11:
+            card.name="Jack";
+            break;
+        case 12:
+            card.name="Queen";
+            break;
+        case 13:
+            card.name="King";
+            break;
+        default:
+            card.name= num.toString();
+            break;               
+    }
+    if(num > 10)
+    {
+        card.value = 10;  
+    }
+    else if (num == 1)
+    {
+        card.value = 11;
+    }
+    else
+    {
+        card.value = num;
+    }
+    return card;
 }
 function back()
 {
