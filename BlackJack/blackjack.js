@@ -2,12 +2,18 @@ let display = document.querySelector("#playerHand");
 let win = document.querySelector("#win");
 let playerSum = document.querySelector("#playerSum");
 
+let playerStats = { name:"John", chips:300}
 let deck = [];
 
 document.querySelector("#hold").style.display = "none";
 document.querySelector("#draw").style.display = "none";
 document.querySelector("#yourcards").style.display = "none";
 document.querySelector("#yoursum").style.display = "none";
+document.querySelector("#nameTag").style.display = "none";
+document.querySelector("#userName").style.display = "none";
+document.querySelector("#userCash").style.display = "none";
+
+document.querySelector()
 
 
 function startGame()
@@ -16,6 +22,9 @@ function startGame()
 
     player = [drawcard(), drawcard()];
     dealer = [drawcard(), drawcard()];
+
+    document.querySelector("#userCash").textContent = playerStats.chips;
+    document.querySelector("#userName").textContent = playerStats.name;
     
     display.textContent = showCards(player);
     playerSum.textContent = sum(player);
@@ -43,6 +52,9 @@ function reset()
     document.querySelector("#yoursum").style.display = "block";
     document.querySelector("#yoursum").style.color = "goldenrod";
     document.querySelector("#playerSum").style.color = "goldenrod";
+    document.querySelector("#nameTag").style.display = "block";
+    document.querySelector("#userName").style.display = "block"
+    document.querySelector("#userCash").style.display = "block";
     // deck = baseDeck;
 }
 
@@ -90,30 +102,23 @@ function winner()
     {  
         document.querySelector("#yoursum").style.color = "red";
         document.querySelector("#playerSum").style.color = "red";
-        win.textContent = "House wins." 
-        win.textContent += " Dealer's hand: " + showCards(dealer);  
-        playerlose = true;
+        dealerWin();
     }
     // if dealer surpasses 21 they lose
     else if(sum(dealer) > 21)
     {
-        win.textContent = "YOU WIN!";
-        win.textContent += " Dealer's hand: " + showCards(dealer);
-        dealerlose = true;
+        playerWin();
     }
     else if(sum(player) > sum(dealer))
     {     
-        win.textContent = "YOU WIN!";
-        win.textContent += " Dealer's hand: " + showCards(dealer);
-        dealerlose = true;
+        playerWin();
     }
     else
     {
-        win.textContent = "House wins.";
-        win.textContent += " Dealer's hand: " + showCards(dealer); 
-        playerlose = true;
+        dealerWin();
     }
-
+    // document.querySelector("#nameTag").style.display = "none";
+    // document.querySelector("#userCash").style.display = "none";
     document.querySelector("#start").style.display = "block";
     document.querySelector("#hold").style.display = "none";
     document.querySelector("#draw").style.display = "none";
@@ -265,3 +270,17 @@ function back()
 {
     window.open("../projects.html", "_self");
 }
+ function playerWin()
+ {
+    win.textContent = "YOU WIN!";
+    win.textContent += " Dealer's hand: " + showCards(dealer);
+    dealerlose = true;
+    playerStats.chips += 20;
+ }
+ function dealerWin()
+ {
+    win.textContent = "House wins.";
+    win.textContent += " Dealer's hand: " + showCards(dealer); 
+    playerlose = true;
+    playerStats.chips -= 10;
+ }

@@ -1,0 +1,189 @@
+body {
+    display:grid;
+    grid-template-rows: 0.4fr 1.4fr 0.4fr;
+    justify-content: center;
+    align-content: center;
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
+    background-image: url("table.png");
+    background-repeat: repeat;
+    background-size: cover;
+    background-color:#016f32;
+    font-weight: 700;
+
+    color: white;
+    text-align: center;
+    height: 100%;
+    width: 90%;
+
+    margin: 5% 5% 5% 5%;
+    font-size: 2.5vw;
+}
+button {
+
+    color: #016f32;
+    background: goldenrod;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4%;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    transition: background 0.5s ease;
+    text-align: center;
+    white-space: wrap;
+    text-overflow: clip;
+    overflow:hidden;
+    
+    width: 100%;
+    height: 90%;
+}
+button:hover
+{
+    color: #00ac4d;
+    background: rgb(255, 183, 0);
+}
+.title
+{
+    display:grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    align-content: center;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+.title .txt
+{
+    grid-area: 1 / 1 / span 1 / span 3;
+    font-size: 0.8em;
+}
+.jackblack
+{
+    display: grid;
+    border:3px solid rgb(253, 74, 4);
+    border-radius: 10%;
+    grid-area: 2 / 2 / span 1 / span 1;
+    align-items: center;
+    block-size: 30vw;
+    justify-content: center;
+}
+.gamearea
+{
+    display:grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 3fr 1fr 4fr 1fr 3fr;
+
+    align-content:space-between;
+    gap: 1%;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+
+    margin: 3% 10% 3% 10%;
+}
+#start
+{
+    align-self: center;
+
+    grid-area: 4 / 3 / span 1 / span 1;
+    font-weight: 700;
+    font-size: 1.6em;
+    width: 100%;
+    height: 90%;
+}
+#yourcards{
+    color: goldenrod;
+    font-size: 4.5em;
+    grid-area: 1 / 1 / span 1 / span 5;
+}
+#playerHand {
+    color: goldenrod;
+    font-size: 3.5em;
+    grid-area: 2 / 1 / span 1 / span 5;
+}
+#yoursum
+{
+    color: goldenrod;
+    font-size: 4em;
+    grid-area: 3 / 1 / span 1 / span 2;
+}
+#playerSum
+{
+    color: goldenrod;
+    font-size: 3em;
+    grid-area: 3 / 4 / span 1 / span 2;
+}
+#draw
+{
+    align-self: center;
+    grid-area: 4 / 1 / span 2 / span 2;
+    font-weight: 700;
+    font-size: 1.8em;
+    align-self: center;
+}
+#hold
+{
+    align-content: center;
+    grid-area: 4 / 4 / span 2 / span 2;
+    font-weight: 700;
+    font-size: 1.8em;
+    align-self: center;
+}
+#win {
+    font-style: italic;
+    color: goldenrod;
+    font-size: 2.5em;
+    grid-area: 5 / 1 / span 1 / span 5;
+    width: 100%;
+    height: 100%;
+}
+
+#nameTag
+{
+    justify-self:center;
+    align-self: center;
+    font-style: italic;
+    color: goldenrod;
+    font-size: 2.5em;
+    grid-area: 6 / 1 / span 1 / span 2;
+    width:100%;
+}
+#userCash
+{
+    justify-self:center;
+    align-self: center;
+    font-style: italic;
+    color: goldenrod;
+    font-size: 2.5em;
+    grid-area: 6 / 4 / span 1 / span 2;
+    width:100%;
+}
+
+.title
+{
+    font-weight: 700;
+    font-size: 10em;
+    color: rgb(253, 74, 4);
+}
+.back
+{
+    font-size: 10em;
+    font-weight: 900;
+    width: 50%;
+    height: 50%;
+    justify-self: center;
+    align-self:baseline;
+}
+#userName
+{
+    justify-self:center;
+    align-self: center;
+    font-style: italic;
+    color: goldenrod;
+    font-size: 2.5em;
+    grid-area: 6 / 3 / span 1 / span 1;
+    width:100%;
+
+}
