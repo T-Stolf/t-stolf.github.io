@@ -19,207 +19,209 @@ css
   
 body{
     display: grid;
+    grid-template-rows: 2fr 4fr  1fr 1fr;
+    grid-template-columns: auto;
+    gap: 3%;
+
+    align-items: space-between;
+    justify-items: space-between;
+    
     background: black;
-    color: green;
-    font-size: large;
+    color: white;
+    font-size: 3vw;
     font-family: Arial;
     margin: 0 0 0 0;
-    font-size: 1em;
 }
-button{
-    color:black;
-    background:rgb(0, 182, 61);
-    outline: 0;
-    border: none;
-    transition: background 0.2s ease; /* what to transition, how long, how to do it (ease, linear, ease-in-out etc), wait before duration*/
+body:last-child
+{
+    margin-top: auto;
+}
+body:first-child
+{
+    margin-bottom: auto;
+}
+button
+{
+   
+    border: solid rgb(158, 158, 158);
+    border-width: 3px;
+    border-radius: 5%;
+    background: rgba(148, 146, 146, 0.76);
+    font-size: 1em;
+    transition: background 0.5s ease;
+
 }
 button:hover
+{   
+    border: solid rgb(197, 197, 197);
+    background: rgba(190, 189, 189, 0.76);
+}
+ul
 {
-    background-color: rgb(123, 255, 0);
-    color:rgb(56, 56, 56);
-    padding: 10px 10px 10px 10px;
-}
-.header{
-   height:250px;
-   background: url("imgs/discord.png");
-   background-size:contain;
-   background-repeat: no-repeat;
-   background-position: center;
-}
-.colourTransparent{    
-    width: 90%;
-    height: 100%;
-    background: rgba(1, 40, 77,0.8);
-    padding: 0 5% 0 5%;
-}
-.internalstuff{
-    display:grid;
-    grid-template-rows: 100px 100px;
-    grid-template-columns: auto;
+    list-style-type: none; 
+    padding: 0 0 0 0;
+} 
+.colourTransparent
+{
+    background: rgba(161, 161, 161, 0.425) ;
+    padding: 15px 15px 15px 15px;
 
-    gap: 15px;
-    
-    justify-content: center;
-    align-content: center;
-    width: 90%;
-    height: 100%;
-    padding: 0 5% 0 5%;
-   
 }
-.internalstuff .name{
-    font-size: 4em;
-    grid-area: 1 / 2 / span 1 /span 1;
-    align-self: center;
-    margin: 50px 0 0 0;
-    font-weight: 700;
-    
-}
-.internalstuff .occupation{
-    font-size: x-large; 
-    grid-area: 2 / 2 / span 1 /span 1;
-    align-self: center;
-    font-weight: 600;
-}
-.internalstuff img{
-    border: 3px solid black;
-    max-width: 13vw;
-    max-height: 20vh;
+.internalStuff
+{
+    display: grid;
+    grid-template-columns: 1fr 2fr ;
+    grid-template-rows: 1fr 1fr;
+    gap: 3%;
+    padding: 15px 10% 15px 10%;
+    border-radius: 5%;
+    justify-items: center;
+    align-items: center;
+} 
+.meImage
+{
+    grid-area: 1 / 1 / span 2 / span 1;
+    /* grid-area: picture; */
+    width: 10vw;
+    min-width: 100%;
+    border: 3px solid rgb(41, 41, 41);
     border-radius: 30%;
-    grid-area: 1 / 1 / span 2 /span 1;
-    margin: 10% 0 0 0;
 }
-
-.mainButtons{
-    position: relative;
-    border: groove rgba(1, 40, 77, 1);
-    border-radius: 15px;
-    color:rgb(7, 26, 18);
-}
-.mainButtons:hover{
-    color:rgb(0, 46, 73);
-}
-.back
-{
-    display: grid;
-    grid-template-rows: 50px;
-    grid-template-columns: 50px;
-    align-content: space-around;
-    justify-content: center;
-    font-size: 2em;
-    padding:0 15px 15px 15px;
-}
-#goback{
-    border: black solid;
-    border-radius: 15px;
+.name
+{   
+    grid-area: 1 / 2 / span 1 / span 1;
+    /* grid-area: name; */
+    /* grid: 1 / 2 / span 1 /span 3; */
+    font-size: 2.5em;
     font-weight: 600;
 }
-#goback:hover
-{
+.occupation
+{   
+    grid-area: 2 / 2 / span 1 / span 1;
+    font-size: 1.5em;
     font-weight: 600;
-}
 
-.contactbar{
-    display: grid;
-    padding:0 15px 0 15px;
-    
-    grid-template-rows: 100px;
-    grid-template-columns: auto;
-    align-content: space-around;
-    gap: 15px;
-
-    background: rgb(1, 40, 77); 
-    padding: 10px 10px 10px 10px;
-}
-.contactButton {
-    border: black solid;
-    background-color: rgb(0, 182, 61);
-    border-radius: 15px;
-    /* padding: 5px 5px 5px 5px; top right bot left */
-    margin: 0 0; /*top/bottom && left/right */
-}
-.contactname{
-    grid-area: 1 / 1 / span 1 /span 1;
-    align-self: center;
-    padding-left: 3%;
-    font-size: 2em;
-    font-weight: 600;
-}
-#phone{
-    grid-area: 1 / 2 / span 1 /span 1;
-    align-self: center;
-}
-#email{
-    grid-area: 1 / 3 / span 1 /span 1;
-    align-self: center;
-}
-#discord{
-    grid-area: 1 / 4 / span 1 /span 1;
-    align-self: center;
-}
-.topandbotlines{
-    border-bottom: 6px;
-    border-top: 6px;
-    border-left: 0;
-    border-right: 0;
+    border-top: 3px;
+    border-bottom: 3px;
+    border-left: 0px;
+    border-right: 0px;
     border-style: solid;
-    border-color: black;
 }
-.mainsection{
-    padding:0 15px 0 15px;
+.mainsection
+{
     display: grid;
+    grid-template-columns: 1fr 14fr 1fr;
     grid-template-rows: auto;
-    grid-template-columns: 20% 80%;
-    gap: 15px;
-    align-content: space-around;
-    justify-content: center;
-}
-.p1{
-    grid-area: 1 / 2 / span 1 /span 1;
-    align-self: center;
-}
-.p2{
-    grid-area: 2 / 2 / span 1 /span 1;
-    align-self: center;
+    justify-content: space-between;
 
-}
-.p3{
-    grid-area: 3 / 2 / span 1 /span 1;
-    align-self: center;
+    gap: 3%;
 
-}
-.p4{
-    grid-area: 4 / 2 / span 1 /span 1;
-    align-self: center;
+    /* margin: 0 3% 0 3%; */
+    border-radius: 5%;
 
+    justify-items: stretch;
+    align-items: center;
 }
-.I1{
-    grid-area: 1 / 1 / span 1 / span 1;
-    align-self: center;
+.I1
+{
+    grid-area: 1 / 2 / span 1 / span 1;
+    text-align: center;
+}
+.I2
+{
+    grid-area: 2 / 2 / span 1 / span 1;
+    text-align: center;
+}
+.I3
+{
+    grid-area: 3 / 2 / span 1 / span 1;
+    text-align: center;
+}
+.I4
+{
+    grid-area: 4 / 2 / span 1 / span 1;
+    text-align: center;
+}
+.mainButtons
+{
     font-weight: 600;
-    font-size: 2em;
-    overflow-wrap: break-word;
+    border-radius: 3%;
 }
-.I2{
-    grid-area: 2 / 1 / span 1 /span 1;
-    align-self: center;
-    font-weight: 600;
-    font-size: 2em;
-    overflow-wrap: break-word;
-
-}
-.I3{
-    grid-area: 3 / 1 / span 1 /span 1;
-    align-self: center;
-    font-weight: 600;
-    font-size: 2em;
-    overflow-wrap: break-word;
-
-}
-.I4{
-    grid-area: 4 / 1 / span 1 /span 1;
-    align-self: center;
-    font-weight: 600;
-    font-size: 2em;
-    overflow-wrap: break-word;
+.descriptor
+{
+    font-size: 1.3em;
+    text-align: center;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 3px;
+    border-style: solid;
+    border-color: white;
 }
 
+.contactbar
+{
+    margin-top:auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr;
+    grid-template-rows: 1fr;
+    gap: 3%;
+
+    padding: 15px 3% 15px 3%;
+
+    align-items: stretch; 
+    justify-items: stretch;
+
+    background: rgba(161, 161, 161, 0.425) ;
+    padding: 15px 15px 15px 15px;
+}
+.contactname
+{
+    font-size: 1.3em;
+    font-weight: 600;
+}
+.contactImg
+{
+    height: 80%;
+    width: 80%;
+}
+.back 
+{
+    padding: 5% 5% 5% 5%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+.Type
+{
+    text-decoration: underline;
+    font-size: 1.2em;
+    font-weight:700;
+}
+.Location
+{
+    font-weight:700;
+}
+.TimePeriod
+{
+    font-weight:600;   
+}
+::-webkit-scrollbar
+{
+    width: 20px;
+}
+
+::-webkit-scrollbar-track
+{
+    background: rgb(96, 109, 121);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb
+{
+    background: rgb(0, 71, 202);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+    transition: background 2s ease;
+    background:rgb(2, 86, 241);
+}

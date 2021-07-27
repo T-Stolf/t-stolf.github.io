@@ -39,13 +39,13 @@ function contact(type)
     switch(type)
     {
         case 0:
-            window.alert("416-434-6088");
+            window.open("tel:1-416-434-6088", "_self");
             break;
         case 2:
-            window.alert("Kasfas#1675");
+            window.open("https://discord.gg/zmdPaKqkZS", "_self");
             break;
         case 1:
-            window.alert("thomsstolf@gmail.com");
+            window.open("mailto: thomsstolf@gmail.com" ,  "_self");
             break;
         default:
             window.alert("error");
@@ -56,4 +56,9 @@ function contact(type)
 function gitHub()
 {
     window.open("https://github.com/T-Stolf");
+}
+
+function blackjack()
+{
+    window.open("/BlackJack/blackjack.html", "_self");
 }
