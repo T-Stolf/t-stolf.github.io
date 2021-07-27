@@ -19,17 +19,26 @@ css
   
 body{
     display: grid;
-    grid-template-rows: auto;
+    grid-template-rows: 2fr 4fr  1fr 1fr;
     grid-template-columns: auto;
     gap: 3%;
 
     align-items: space-between;
     justify-items: space-between;
+    
     background: black;
     color: white;
     font-size: 3vw;
     font-family: Arial;
     margin: 0 0 0 0;
+}
+body:last-child
+{
+    margin-top: auto;
+}
+body:first-child
+{
+    margin-bottom: auto;
 }
 button
 {
@@ -44,8 +53,8 @@ button
 }
 button:hover
 {   
-        border: solid rgb(197, 197, 197);
-        background: rgba(190, 189, 189, 0.76);
+    border: solid rgb(197, 197, 197);
+    background: rgba(190, 189, 189, 0.76);
 }
 ul
 {
@@ -152,6 +161,7 @@ ul
 
 .contactbar
 {
+    margin-top:auto;
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 2fr;
     grid-template-rows: 1fr;
@@ -195,4 +205,23 @@ ul
 .TimePeriod
 {
     font-weight:600;   
+}
+::-webkit-scrollbar
+{
+    width: 20px;
+}
+
+::-webkit-scrollbar-track
+{
+    background: rgb(96, 109, 121);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb
+{
+    background: rgb(0, 71, 202);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+    transition: background 2s ease;
+    background:rgb(2, 86, 241);
 }
