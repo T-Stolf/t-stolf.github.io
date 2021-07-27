@@ -1,6 +1,7 @@
 css
 :root{
     --blue: rgb(1, 40, 77);
+    --background-colour: black;
 }*{
     font-family: helvetica;
   }
@@ -19,12 +20,15 @@ css
   
 body{
     display: grid;
-    grid-template-rows: 2fr 4fr  1fr 1fr;
+    grid-template-rows: 2fr 4fr 1fr 1fr;
+    /* grid-template-rows: auto; */
     grid-template-columns: auto;
     gap: 3%;
 
     align-items: space-between;
     justify-items: space-between;
+    align-content: space-between;
+    justify-content: space-between;
     
     background: black;
     color: white;
@@ -65,7 +69,6 @@ ul
 {
     background: rgba(161, 161, 161, 0.425) ;
     padding: 15px 15px 15px 15px;
-
 }
 .internalStuff
 {
@@ -110,43 +113,76 @@ ul
 .mainsection
 {
     display: grid;
-    grid-template-columns: 1fr 14fr 1fr;
+    grid-template-columns: 2fr 14fr 2fr;
     grid-template-rows: auto;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-content: space-around;
 
-    gap: 3%;
-
-    /* margin: 0 3% 0 3%; */
+    gap: 5%;
     border-radius: 5%;
 
-    justify-items: stretch;
+    justify-items: center;
     align-items: center;
 }
 .I1
 {
     grid-area: 1 / 2 / span 1 / span 1;
     text-align: center;
+    animation-delay: 0s;
 }
 .I2
 {
     grid-area: 2 / 2 / span 1 / span 1;
     text-align: center;
+    animation-delay: -0.3s;
 }
 .I3
 {
     grid-area: 3 / 2 / span 1 / span 1;
     text-align: center;
+    animation-delay: -0.7s;
 }
 .I4
 {
     grid-area: 4 / 2 / span 1 / span 1;
     text-align: center;
+    animation-delay: -1.1s;
 }
 .mainButtons
 {
     font-weight: 600;
-    border-radius: 3%;
+    border-radius: 10%;
+    border:none;
+    background: none;
+    color:white;
+
+    border: 3px solid rgb(0, 26, 255);
+        /* inset 0 0 50px rgb(0, 68, 255);   */
+
+    border-radius: 10%;
+    box-shadow: 0 0 50px rgb(0, 68, 255);
+    animation: fire 5s linear infinite;
+    /* filter: url(#wavey) blur(0.05em);   */
 }
+ 
+.mainButtons:hover
+{
+    padding: 3% 3% 3% 3%;
+}
+.mainButtons:nth-child(2)
+{
+    animation-delay: -2.5s;
+}
+.mainButtons:nth-child(3)
+{
+    animation-delay: -5s;
+}
+svg
+{
+    width:0;
+    height:0;
+}
+
 .descriptor
 {
     font-size: 1.3em;
@@ -225,3 +261,78 @@ ul
     transition: background 2s ease;
     background:rgb(2, 86, 241);
 }
+
+@keyframes fire
+{
+    0% 
+    { 
+        box-shadow: 0 0 5vw rgb(0, 68, 255),
+            inset 0 0 4vw rgb(0, 68, 255); 
+            filter: huerotate(0deg);
+    }
+    20% 
+    { 
+        box-shadow: 0 0 6vw rgb(0, 68, 255),
+            inset 0 0 3vw rgb(0, 68, 255); 
+            filter: huerotate(10deg);
+    }
+    40% 
+    { 
+        box-shadow: 0 0 4vw rgb(0, 68, 255),
+            inset 0 0 2vw rgb(0, 68, 255); 
+            filter: huerotate(20deg);
+    }
+    60% 
+    { 
+        box-shadow: 0 0 8vw rgb(0, 68, 255),
+            inset 0 0 6vw rgb(0, 68, 255); 
+            filter: huerotate(30deg);
+    }
+    80% 
+    { 
+        box-shadow: 0 0 10vw rgb(0, 68, 255),
+            inset 0 0 8vw rgb(0, 68, 255); 
+            filter: huerotate(20deg);
+    }
+    100% 
+    { 
+        box-shadow: 0 0 5vw rgb(0, 68, 255),
+            inset 0 0 4vw rgb(0, 68, 255); 
+            filter: huerotate(10deg);
+    }
+
+
+}
+/*.borders{
+
+    content: url(.mainButtons); 
+    width:100%;
+    height:100%;
+
+    border: 5px solid rgb(0, 26, 255);
+    border-radius: 10%;
+    box-shadow: 0 0 50px rgb(0, 68, 255);
+
+    animation: fire 5s linear infinite;
+    filter: url(#wavey) blur(0.05em);  
+
+}
+
+.borders::before
+{
+    border: 5px solid rgb(0, 26, 255);
+    border-radius: 10%;
+    box-shadow: 0 0 50px rgb(0, 34, 129);
+
+    animation: fire 5s linear infinite;
+    filter: url(#wavey) blur(0.05em);  
+}
+.borders::after
+{
+    border: 5px solid rgb(0, 26, 255);
+    border-radius: 10%;
+    box-shadow: 0 0 50px rgb(64, 67, 73);
+       
+    animation: fire 5s linear infinite;
+    filter: url(#wavey) blur(0.05em); 
+} */
