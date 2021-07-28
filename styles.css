@@ -28,17 +28,22 @@ body{
 }
 button
 {
-    border: solid rgb(158, 158, 158);
+    border: solid 3px rgb(185, 185, 185);
     border-width: 3px;
+    background: none;
+    color: white;
     border-radius: 5%;
-    background: rgba(148, 146, 146, 0.76);
     font-size: 1em;
-    transition: background 0.5s ease;
+    transition: background 2s ease, box-shadow 2s ease;
+    box-shadow: 0px 0 50px rgb(179, 179, 179),
+            inset 0 0 30px rgba(150, 150, 150, 0.5);
 }
 button:hover
 {   
-    border: solid rgb(197, 197, 197);
-    background: rgba(190, 189, 189, 0.76);
+    border: solid 3pxrgb(0, 202, 34);
+    background: rgb(119, 119, 119);
+    box-shadow: 0px 0 50px rgb(151, 151, 151),
+            inset 0 0 30px rgb(203, 204, 203);
 }
 ul
 {
@@ -47,12 +52,14 @@ ul
 } 
 .header
 {
+    
     position: static;
     margin-left:min(500px, 20vw);
 }
 .colourTransparent
 {
-    background: rgba(161, 161, 161, 0.425) ;
+    background-color: rgba(97, 0, 161, 0.514);
+    box-shadow: 0px 0 40px rgb(140, 0, 255);
 }
 .internalStuff
 {
@@ -72,7 +79,7 @@ ul
 
     min-width: 100px;
     min-height: 100px;
-    border: 3px solid rgb(41, 41, 41);
+    border: 3px solid rgb(0, 0, 0);
     border-radius: 30%;
     justify-self: end;
     align-self:center;
@@ -166,7 +173,7 @@ ul
     border: 3px solid rgb(0, 26, 255);
         /* inset 0 0 50px rgb(0, 68, 255);   */
     /* max-height: 1000px; */
-    border-radius: 1vw;
+    border-radius: 2vw;
     box-shadow: 0 0 50px rgb(0, 68, 255);
     transition: background 2s ease, padding 2s ease, border-radius 2s ease;
     animation: fire 5s linear infinite;
@@ -179,7 +186,7 @@ ul
     background: rgba(0, 26, 255, 0.479);
     /* inset 0 0 50px rgb(0, 68, 255);   */
 
-    border-radius: 3vw;
+    border-radius: 4vw;
     box-shadow: 0 0 50px rgb(0, 68, 255);
     animation: fire 5s linear infinite;
         size: 120%;
@@ -191,9 +198,42 @@ ul
     background: rgba(0, 26, 255, 0.479);
     /* inset 0 0 50px rgb(0, 68, 255);   */
 
-    border-radius: 3vw;
+    border-radius: 4vw;
     box-shadow: 0 0 50px rgb(0, 68, 255);
     animation: fire 5s linear infinite;
+        size: 120%;
+}
+.lightBlueGlow
+{
+    border: 3px solid rgb(0, 132, 255);
+    border-radius: 2vw;
+    box-shadow: 0 0 50px rgb(0, 132, 255);
+    transition: background 2s ease, padding 2s ease, border-radius 2s ease;
+    animation: lightfire 5s linear infinite;
+
+}
+.lightBlueGlow:hover
+{
+    padding: 1% 6% 3% 6%;
+    border: 3px solid rgba(0, 174, 255, 0.89);
+    background: rgba(0, 195, 255, 0.24);
+
+
+    border-radius: 4vw;
+    box-shadow: 0 0 50px rgba(0, 174, 255, 0.89);
+    animation: lightfire 5s linear infinite;
+        size: 120%;
+}
+.lightBlueGlow:active
+{
+    padding: 1% 6% 3% 6%;
+    border: 3px solid rgba(0, 174, 255, 0.89);
+    background: rgba(0, 195, 255, 0.24);
+
+
+    border-radius: 4vw;
+    box-shadow: 0 0 50px rgba(0, 174, 255, 0.89);
+    animation: lightfire 5s linear infinite;
         size: 120%;
 }
 svg
@@ -228,18 +268,46 @@ svg
     width: 20vw;
     max-width: 500px;
     height: 100%;
-    background-color: rgba(100, 98, 98, 0.438);
+    background-color: rgba(97, 0, 161, 0.514);
     display: grid; 
     align-items:center;
-    justify-items:center;
+    justify-items:space-between;
+    box-shadow: 0 0 40px rgb(140, 0, 255);
+    transition: background 2s ease, box-shadow 2s ease;
 
 }
-/* .contactbar */
+.contactbar:hover
+{
+    background: rgba(120, 0, 219, 0.699); 
+    box-shadow: 0 0 50px rgb(140, 0, 255); 
+}
+.contactItem
+{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+    height: 10vh;
+    width: 10vh;
+    max-width: 500px;
+    max-height: 500px;
+}
 .contactButton
 {
-    /* display: flex;
-    align-items: center; */
-    height: 20vh;
+    height: 70%;
+    width: 70%; 
+    border: solid 3px rgb(202, 13, 0);
+    background: none;
+    box-shadow: 0px 0 10px rgb(202, 13, 0),
+            inset 0 0 5px rgb(202, 61, 36);
+}
+.contactButton:hover
+{
+    border: solid 3px rgb(202, 13, 0);
+    background: rgba(200, 18, 0, 0.61);
+    box-shadow: 0px 0 20px rgb(202, 13, 0),
+            inset 0 0 10px rgb(202, 61, 36);
 }
 
 .contactImg
@@ -253,6 +321,17 @@ svg
     padding: 1% 1% 1% 1%;
     justify-items: center;
     align-items: center;
+    border: solid 3px rgb(0, 202, 34);
+    transition: background 2s ease, box-shadow 2s ease;
+    box-shadow: 0px 0 15px rgb(0, 202, 34),
+            inset 0 0 8px rgb(0, 202, 34);
+}
+#goback:hover{
+    border: solid 3pxrgb(0, 202, 34);
+    background: rgba(65, 228, 1, 0.61);
+    box-shadow: 0px 0 20px rgb(0, 202, 34),
+            inset 0 0 12px rgb(0, 202, 34);
+
 }
 .Type
 {
@@ -267,6 +346,11 @@ svg
 .TimePeriod
 {
     font-weight:600;   
+}
+.video
+{
+    max-width: 55vw;
+    max-height: 40vh;
 }
 ::-webkit-scrollbar
 {
@@ -324,6 +408,57 @@ svg
     { 
         box-shadow: 0 0 5vw rgb(0, 68, 255),
             inset 0 0 4vw rgb(0, 68, 255); 
+            filter: huerotate(10deg);
+    }
+}
+@keyframes lightfire
+{
+    0%
+    {
+        box-shadow: 0 0 2vw rgb(0, 217, 255),
+            inset 0 0 1vw rgba(0, 217, 255, 0.6); 
+            filter: huerotate(0deg);
+    }
+    14% 
+    { 
+        box-shadow: 0 0 3vw rgb(0, 217, 255),
+            inset 0 0 2vw rgba(0, 217, 255, 0.6); 
+            filter: huerotate(0deg);
+    }
+    28% 
+    { 
+        box-shadow: 0 0 6vw rgb(0, 217, 255),
+            inset 0 0 2.5vw rgba(0, 217, 255, 0.6); 
+            filter: huerotate(10deg);
+    }
+    42% 
+    { 
+        box-shadow: 0 0 8vw rgb(0, 217, 255),
+            inset 0 0 3vw rgba(0, 217, 255, 0.6); 
+            filter: huerotate(20deg);
+    }
+    56% 
+    { 
+        box-shadow: 0 0 6vw rgb(0, 217, 255),
+            inset 0 0 4vw rgba(0, 217, 255, 0.6); 
+            filter: huerotate(30deg);
+    }
+    70% 
+    { 
+        box-shadow: 0 0 4vw rgb(0, 217, 255),
+            inset 0 0 3vw rgba(0, 217, 255, 0.6); 
+            filter: huerotate(20deg);
+    }
+    84% 
+    { 
+        box-shadow: 0 0 3vw rgb(0, 217, 255),
+            inset 0 0 2vw rgba(0, 217, 255, 0.6); 
+            filter: huerotate(10deg);
+    }
+    100%
+    {
+        box-shadow: 0 0 2vw rgb(0, 217, 255),
+            inset 0 0 1vw rgba(0, 217, 255, 0.6); 
             filter: huerotate(10deg);
     }
 
