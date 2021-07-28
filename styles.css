@@ -48,7 +48,7 @@ ul
 .header
 {
     position: static;
-    margin-left:20vw;
+    margin-left:min(500px, 20vw);
 }
 .colourTransparent
 {
@@ -80,7 +80,7 @@ ul
 .name
 {   
     grid-area: 2 / 3 / span 2 / span 1;
-    font-size: 2.7em;
+    font-size: 1.8em;
     font-weight: 600;
     justify-self: start;
     align-self: center;
@@ -88,7 +88,7 @@ ul
 .occupation
 {   
     grid-area: 4 / 3 / span 1 / span 1;
-    font-size: 1.2Sem;
+    font-size: 1em;
     font-weight: 600;
 
     border-top: 3px;
@@ -102,7 +102,7 @@ ul
 .mainsection
 {
     margin-top: 1%;
-    margin-left:20vw;
+    margin-left:min(500px, 20vw);
     display: grid;
     grid-template-columns: 1fr 7fr 1fr;
     grid-template-rows: auto;
@@ -166,9 +166,9 @@ ul
     border: 3px solid rgb(0, 26, 255);
         /* inset 0 0 50px rgb(0, 68, 255);   */
     /* max-height: 1000px; */
-    border-radius: 10%;
+    border-radius: 1vw;
     box-shadow: 0 0 50px rgb(0, 68, 255);
-    transition: background 2s ease, padding 2s ease;
+    transition: background 2s ease, padding 2s ease, border-radius 2s ease;
     animation: fire 5s linear infinite;
 
 }
@@ -179,7 +179,19 @@ ul
     background: rgba(0, 26, 255, 0.479);
     /* inset 0 0 50px rgb(0, 68, 255);   */
 
-    border-radius: 10%;
+    border-radius: 3vw;
+    box-shadow: 0 0 50px rgb(0, 68, 255);
+    animation: fire 5s linear infinite;
+        size: 120%;
+}
+.blueGlow:active
+{
+    padding: 1% 6% 3% 6%;
+    border: 3px solid rgb(0, 26, 255);
+    background: rgba(0, 26, 255, 0.479);
+    /* inset 0 0 50px rgb(0, 68, 255);   */
+
+    border-radius: 3vw;
     box-shadow: 0 0 50px rgb(0, 68, 255);
     animation: fire 5s linear infinite;
         size: 120%;
@@ -214,6 +226,7 @@ svg
     padding: 0;
     margin: 0;
     width: 20vw;
+    max-width: 500px;
     height: 100%;
     background-color: rgba(100, 98, 98, 0.438);
     display: grid; 
@@ -222,6 +235,12 @@ svg
 
 }
 /* .contactbar */
+.contactButton
+{
+    /* display: flex;
+    align-items: center; */
+    height: 20vh;
+}
 
 .contactImg
 {
