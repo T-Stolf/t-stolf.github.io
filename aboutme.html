@@ -9,40 +9,9 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <header class="header"> <!-- header is used for headers, nav is used for navigation bar-->
-        <div class="colourTransparent">
-            <div class="internalStuff">
-                <img class="meImage" src="imgs\me.jpeg" alt="photo of me"> 
-                <div class="name">Thomas Stolf</div>
-                <!-- <hr> horizontal line / horizontal rule -->
-                <div class="occupation topandbotlines">Software Engineer / Video Editor</div> 
-            </div>
-        </div>   
-    </header>
     
-    <section class="mainsection">
+    <nav class="contactbar">
  
-            <div class="I1"> <p class="descriptor">Personality</p>
-            <span> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam ea dolore labore ipsum nostrum dignissimos.</span>
-            </div>
-            <div class="I2"><p class="descriptor">Hobbies</p>
-            <span> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam ea dolore labore ipsum nostrum dignissimos.</span>
-            </div>
-            <div class="I3"><p class="descriptor">Topics of Interest</p>
-            <span> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam ea dolore labore ipsum nostrum dignissimos.</span>
-            </div>
-            
-    </section>
-
-    <section class="back">
-        <button id="goback" onclick="back()">
-            Back
-        </button>
-    </section>
-
-    <div class="contactbar">
-        <p class="contactname">Contact:</p>
         <button class="contactButton" id="phone" onclick="contact(0)"> 
             <img class="contactImg" src="imgs\phone.png" alt="phone">
         </button>
@@ -54,7 +23,35 @@
         <button class="contactButton" id="discord" onclick="contact(2)">
             <img class="contactImg" src="imgs\discord.png" alt="discord">
         </button>
-    </div>
+    </nav>
+
+    <header class="header"> <!-- header is used for headers, nav is used for navigation bar-->
+        <div class="colourTransparent">
+            <div class="internalStuff">
+                <img class="meImage" src="imgs\me.jpeg" alt="photo of me"> 
+                <div class="name">Thomas Stolf</div>
+                <!-- <hr> horizontal line / horizontal rule -->
+                <div class="occupation topandbotlines">Software Engineer / Video Editor</div> 
+            </div>
+        </div>   
+    </header>
+
+    <section class="mainsection">
+ 
+            <div class="I1 blueGlow"> <p class="descriptor">Personality</p>
+            <span> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam ea dolore labore ipsum nostrum dignissimos.</span>
+            </div>
+            <div class="I2 blueGlow"><p class="descriptor">Hobbies</p>
+            <span> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam ea dolore labore ipsum nostrum dignissimos.</span>
+            </div>
+            <div class="I3 blueGlow"><p class="descriptor">Topics of Interest</p>
+            <span> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam ea dolore labore ipsum nostrum dignissimos.</span>
+            </div>
+            <button id="goback" onclick="back()">
+                Back
+            </button>
+    </section>
+
 
     <script src="app.js">
     </script>

@@ -11,6 +11,21 @@
 
 <body>
 
+    <nav class="contactbar">
+ 
+        <button class="contactButton" id="phone" onclick="contact(0)"> 
+            <img class="contactImg" src="imgs\phone.png" alt="phone">
+        </button>
+
+        <button class="contactButton" id="email" onclick="contact(1)">
+            <img class="contactImg" src="imgs\gmail.png" alt="Gmail">
+        </button>
+
+        <button class="contactButton" id="discord" onclick="contact(2)">
+            <img class="contactImg" src="imgs\discord.png" alt="discord">
+        </button>
+    </nav>
+
     <header class="header"> <!-- header is used for headers, nav is used for navigation bar-->
         <div class="colourTransparent">
             <div class="internalStuff">
@@ -24,17 +39,17 @@
 
     <section class="mainsection">
 
-        <div class="I1"> <p class="descriptor">Videos</p>
+        <div class="I1 blueGlow"> <p class="descriptor">Videos</p>
             <span> I enjoy spending time editing and developing videos. I would self-describe as specializing in fast-paced videos laced with humour; i am however capable of other styles of editing.
-                <iframe src="https://www.youtube.com/embed/3mmGa_zX96A" frameborder="0" scrolling="no" allowfullscreen="true" width = "100%"></iframe>
-                <video width="100%" height="240" controls>
+                <iframe src="https://www.youtube.com/embed/3mmGa_zX96A" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+                <video controls>
                     <source src="Thatwater'sold.mp4" type="Video/mp4">
                   Your browser does not support the video tag.
                   </video>
 
             </span>
             </div>
-            <div class="I2"><p class="descriptor">Game Development</p>
+            <div class="I2 blueGlow"><p class="descriptor">Game Development</p>
             <span> I've spent a good portion of my time attempting to understand and develop my own video games. I have developed small games on several platforms, GameMakerStudio and Unity, and in several languages java and javascript.</span>
             <section class="blackjack">
                 <button id="blackjackBut" onclick="blackjack()">
@@ -42,37 +57,18 @@
                 </button>
             </section>
             </div>
-            <div class="I3"><p class="descriptor">Code</p>
+            <div class="I3 blueGlow"><p class="descriptor">Code</p>
             <span> As a software engineer in training i've developed several projects to do with my development. For instance, ive developed OS scheduling software, as well as software called "talkbox" used to assist verbally disadvantaged people.</span>
             </div>
-            <button class="mainButtons I4" onclick="gitHub()"><p class="descriptor"> Other</p>
+            <button class="mainButtons I4 blueGlow" onclick="gitHub()"><p class="descriptor"> Other</p>
                 <span> Any and all other projects I create i plan on posting publicly to my github.</span>
             </button>
-    
-        </section>
-        
-        <br>
-
-        <section class="back">
+            
             <button id="goback" onclick="back()">
                 Back
             </button>
+    
         </section>
-
-        <div class="contactbar">
-            <p class="contactname">Contact:</p>
-            <button class="contactButton" id="phone" onclick="contact(0)"> 
-                <img class="contactImg" src="imgs\phone.png" alt="phone">
-            </button>
-    
-            <button class="contactButton" id="email" onclick="contact(1)">
-                <img class="contactImg" src="imgs\gmail.png" alt="Gmail">
-            </button>
-    
-            <button class="contactButton" id="discord" onclick="contact(2)">
-                <img class="contactImg" src="imgs\discord.png" alt="discord">
-            </button>
-        </div>
 
     <script src="app.js">
     </script>

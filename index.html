@@ -11,6 +11,21 @@
 
 <body class="body">
 
+    <nav class="contactbar">
+ 
+        <button class="contactButton" id="phone" onclick="contact(0)"> 
+            <img class="contactImg" src="imgs\phone.png" alt="phone">
+        </button>
+
+        <button class="contactButton" id="email" onclick="contact(1)">
+            <img class="contactImg" src="imgs\gmail.png" alt="Gmail">
+        </button>
+
+        <button class="contactButton" id="discord" onclick="contact(2)">
+            <img class="contactImg" src="imgs\discord.png" alt="discord">
+        </button>
+    </nav>
+
     <header class="header"> <!-- header is used for headers, nav is used for navigation bar-->
         <div class="colourTransparent">
             <div class="internalStuff">
@@ -25,41 +40,23 @@
     <!-- list of details -->
     <section class="mainsection">
 
-        <span class="border I1">  
-             <button class="mainButtons" onclick="aboutme()"> <p class="descriptor">About Me</p> 
-                <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis, vel deserunt alias pariatur voluptas iure!</span>
+            <button class="mainButtons I1 blueGlow" onclick="aboutme()"> 
+                <p class="descriptor">About Me</p> 
+                <span class="buttonText">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis, vel deserunt alias pariatur voluptas iure!</span>
             </button>
-        </span>  
 
-        <span class="border I2">
-             <button class="mainButtons" onclick="projects()"> <p class="descriptor">Projects</p> 
-                <span>I have many skills in the online space from game development and programming, to video editing.</span>  
+             <button class="mainButtons I2 blueGlow" onclick="projects()"> 
+                <p class="descriptor">Projects</p> 
+                <span class="buttonText">I have many skills in the online space from game development and programming, to video editing.</span>  
             </button>
-        </span> 
 
-        <span class="border I3">
-             <button class="mainButtons" onclick="experience()"> <p class="descriptor">Experience</p> 
-                <span>I am a Software Engineering student at the Lassonde School of Engineering at York University. I am seeking an opportunity that will allow me to use my computer and analytical skills in a progressive office environment.</span>
-             </button>
-        </span> 
+            <button class="mainButtons I3 blueGlow" onclick="experience()"> 
+                <p class="descriptor">Experience</p> 
+                <span class="buttonText">I am a Software Engineering student at the Lassonde School of Engineering at York University. I am seeking an opportunity that will allow me to use my computer and analytical skills in a progressive office environment.</span>
+            </button>
 
     </section>
 
-    <div class="contactbar">
-        <p class="contactname">Contact:</p>
-        <button class="contactButton" id="phone" onclick="contact(0)"> 
-            <img class="contactImg" src="imgs\phone.png" alt="phone">
-        </button>
-
-        <button class="contactButton" id="email" onclick="contact(1)">
-            <img class="contactImg" src="imgs\gmail.png" alt="Gmail">
-        </button>
-
-        <button class="contactButton" id="discord" onclick="contact(2)">
-            <img class="contactImg" src="imgs\discord.png" alt="discord">
-        </button>
-    </div>
-    
     <script src="app.js">
     </script>
     <noscript>

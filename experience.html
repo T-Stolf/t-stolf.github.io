@@ -9,6 +9,21 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <nav class="contactbar">
+ 
+        <button class="contactButton" id="phone" onclick="contact(0)"> 
+            <img class="contactImg" src="imgs\phone.png" alt="phone">
+        </button>
+
+        <button class="contactButton" id="email" onclick="contact(1)">
+            <img class="contactImg" src="imgs\gmail.png" alt="Gmail">
+        </button>
+
+        <button class="contactButton" id="discord" onclick="contact(2)">
+            <img class="contactImg" src="imgs\discord.png" alt="discord">
+        </button>
+    </nav>
  
     <header class="header"> <!-- header is used for headers, nav is used for navigation bar-->
         <div class="colourTransparent">
@@ -21,9 +36,9 @@
         </div>   
     </header>
 
-    <section class="mainsection">
+    <section class="mainsection ">
    
-        <div class="I1"> <p class="descriptor">Highlights</p>
+        <div class="I1 blueGlow"> <p class="descriptor">Highlights</p>
                 <span> 
                     <ul>
                         <li>Strong technical, computer and analytical skills (able to build PC from scratch).</li>
@@ -36,7 +51,7 @@
                     </ul>
                 </span>
             </div>
-            <div class="I2"><p class="descriptor">Work and Volunteer Experience</p>
+            <div class="I2 blueGlow"><p class="descriptor">Work and Volunteer Experience</p>
             <span>
                 <ul>
                     <li>
@@ -101,7 +116,7 @@
                 </ul>
             </span>
             </div>
-            <div class="I3"><p class="descriptor">Education</p>
+            <div class="I3 blueGlow"><p class="descriptor">Education</p>
                 <span> 
                     <ul>
                         <li>
@@ -121,29 +136,10 @@
                     </ul>
                 </span>
             </div>
-    </section>
-    <br>
-
-    <section class="back">
         <button id="goback" onclick="back()">
             Back
         </button>
     </section>
-    
-    <div class="contactbar">
-        <p class="contactname">Contact:</p>
-        <button class="contactButton" id="phone" onclick="contact(0)"> 
-            <img class="contactImg" src="imgs\phone.png" alt="phone">
-        </button>
-
-        <button class="contactButton" id="email" onclick="contact(1)">
-            <img class="contactImg" src="imgs\gmail.png" alt="Gmail">
-        </button>
-
-        <button class="contactButton" id="discord" onclick="contact(2)">
-            <img class="contactImg" src="imgs\discord.png" alt="discord">
-        </button>
-    </div>
 
     <script src="app.js">
     </script>

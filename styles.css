@@ -19,41 +19,21 @@ css
   /* background size and background repeat, exactly what you expect*/
   
 body{
-    display: grid;
-    grid-template-rows: 2fr 4fr 1fr 1fr;
-    /* grid-template-rows: auto; */
-    grid-template-columns: auto;
-    gap: 3%;
 
-    align-items: space-between;
-    justify-items: space-between;
-    align-content: space-between;
-    justify-content: space-between;
-    
     background: black;
     color: white;
-    font-size: 3vw;
     font-family: Arial;
     margin: 0 0 0 0;
-}
-body:last-child
-{
-    margin-top: auto;
-}
-body:first-child
-{
-    margin-bottom: auto;
+    font-size: max(1.8vw, 18px);
 }
 button
 {
-   
     border: solid rgb(158, 158, 158);
     border-width: 3px;
     border-radius: 5%;
     background: rgba(148, 146, 146, 0.76);
     font-size: 1em;
     transition: background 0.5s ease;
-
 }
 button:hover
 {   
@@ -65,43 +45,50 @@ ul
     list-style-type: none; 
     padding: 0 0 0 0;
 } 
+.header
+{
+    position: static;
+    margin-left:20vw;
+}
 .colourTransparent
 {
     background: rgba(161, 161, 161, 0.425) ;
-    padding: 15px 15px 15px 15px;
 }
 .internalStuff
 {
     display: grid;
-    grid-template-columns: 1fr 2fr ;
-    grid-template-rows: 1fr 1fr;
-    gap: 3%;
-    padding: 15px 10% 15px 10%;
+    max-height: 1550px;
+    grid-template-columns: repeat(4, 2fr); 
+    grid-template-rows: 1fr 3fr 3fr 3fr 1fr;
+    column-gap:min(30px, 3%);
     border-radius: 5%;
-    justify-items: center;
-    align-items: center;
+    
 } 
 .meImage
 {
-    grid-area: 1 / 1 / span 2 / span 1;
-    /* grid-area: picture; */
-    width: 10vw;
-    min-width: 100%;
+    grid-area: 2 / 2 / span 3 / span 1;
+    max-width: 100%;
+    max-height: 100%;
+
+    min-width: 100px;
+    min-height: 100px;
     border: 3px solid rgb(41, 41, 41);
     border-radius: 30%;
+    justify-self: end;
+    align-self:center;
 }
 .name
 {   
-    grid-area: 1 / 2 / span 1 / span 1;
-    /* grid-area: name; */
-    /* grid: 1 / 2 / span 1 /span 3; */
-    font-size: 2.5em;
+    grid-area: 2 / 3 / span 2 / span 1;
+    font-size: 2.7em;
     font-weight: 600;
+    justify-self: start;
+    align-self: center;
 }
 .occupation
 {   
-    grid-area: 2 / 2 / span 1 / span 1;
-    font-size: 1.5em;
+    grid-area: 4 / 3 / span 1 / span 1;
+    font-size: 1.2Sem;
     font-weight: 600;
 
     border-top: 3px;
@@ -109,73 +96,93 @@ ul
     border-left: 0px;
     border-right: 0px;
     border-style: solid;
+    justify-self: start;
+    align-self: center;
 }
 .mainsection
 {
+    margin-top: 1%;
+    margin-left:20vw;
     display: grid;
-    grid-template-columns: 2fr 14fr 2fr;
+    grid-template-columns: 1fr 7fr 1fr;
     grid-template-rows: auto;
     justify-content: space-around;
-    align-content: space-around;
+    align-content: center;
+    row-gap: max(30px, 4%);
 
-    gap: 5%;
-    border-radius: 5%;
+    border-radius: 5px;
 
     justify-items: center;
     align-items: center;
+    padding: 10px 0 10px 0;
 }
 .I1
 {
-    grid-area: 1 / 2 / span 1 / span 1;
+    /* grid-area: 1 / 2 / span 1 / span 1; */
+    grid-column: 2;
     text-align: center;
     animation-delay: 0s;
 }
 .I2
 {
-    grid-area: 2 / 2 / span 1 / span 1;
+    /* grid-area: 2 / 2 / span 1 / span 1; */
+    grid-column: 2;
     text-align: center;
-    animation-delay: -0.3s;
+    animation-delay: -0.25s;
 }
 .I3
 {
-    grid-area: 3 / 2 / span 1 / span 1;
+    /* grid-area: 3 / 2 / span 1 / span 1; */
+    grid-column: 2;
     text-align: center;
-    animation-delay: -0.7s;
+    animation-delay: -0.5s;
 }
 .I4
 {
-    grid-area: 4 / 2 / span 1 / span 1;
+    /* grid-area: 4 / 2 / span 1 / span 1; */
+    grid-column: 2;
     text-align: center;
-    animation-delay: -1.1s;
+    animation-delay: -0.75s;
 }
 .mainButtons
 {
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-items: center;
+
     font-weight: 600;
     border-radius: 10%;
-    border:none;
     background: none;
     color:white;
 
+    /* filter: url(#wavey) blur(0.05em);   */
+    
+    padding: 0% 3% 1% 3%;
+}
+.blueGlow
+{
     border: 3px solid rgb(0, 26, 255);
         /* inset 0 0 50px rgb(0, 68, 255);   */
+    /* max-height: 1000px; */
+    border-radius: 10%;
+    box-shadow: 0 0 50px rgb(0, 68, 255);
+    transition: background 2s ease, padding 2s ease;
+    animation: fire 5s linear infinite;
+
+}
+.blueGlow:hover
+{
+    padding: 1% 6% 3% 6%;
+    border: 3px solid rgb(0, 26, 255);
+    background: rgba(0, 26, 255, 0.479);
+    /* inset 0 0 50px rgb(0, 68, 255);   */
 
     border-radius: 10%;
     box-shadow: 0 0 50px rgb(0, 68, 255);
     animation: fire 5s linear infinite;
-    /* filter: url(#wavey) blur(0.05em);   */
-}
- 
-.mainButtons:hover
-{
-    padding: 3% 3% 3% 3%;
-}
-.mainButtons:nth-child(2)
-{
-    animation-delay: -2.5s;
-}
-.mainButtons:nth-child(3)
-{
-    animation-delay: -5s;
+        size: 120%;
 }
 svg
 {
@@ -185,46 +192,46 @@ svg
 
 .descriptor
 {
+    grid-area: 1 / 1 / span 1 / span 1;
+
     font-size: 1.3em;
     text-align: center;
-    border-top: 0;
-    border-right: 0;
-    border-left: 0;
     border-bottom: 3px;
-    border-style: solid;
-    border-color: white;
+    padding-top: 1%;
+    margin:0;
+
+    text-decoration: underline;
+}
+.buttonText
+{
+    grid-area: 2 / 1 / span 1 / span 1;
+    text-align: center;
 }
 
 .contactbar
 {
-    margin-top:auto;
-    display: grid;
-    grid-template-columns: 1fr 2fr 2fr 2fr;
-    grid-template-rows: 1fr;
-    gap: 3%;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    width: 20vw;
+    height: 100%;
+    background-color: rgba(100, 98, 98, 0.438);
+    display: grid; 
+    align-items:center;
+    justify-items:center;
 
-    padding: 15px 3% 15px 3%;
-
-    align-items: stretch; 
-    justify-items: stretch;
-
-    background: rgba(161, 161, 161, 0.425) ;
-    padding: 15px 15px 15px 15px;
 }
-.contactname
-{
-    font-size: 1.3em;
-    font-weight: 600;
-}
+/* .contactbar */
+
 .contactImg
 {
     height: 80%;
     width: 80%;
 }
-.back 
+#goback 
 {
-    padding: 5% 5% 5% 5%;
-    display: grid;
+    grid-column: 2;
+    padding: 1% 1% 1% 1%;
     justify-items: center;
     align-items: center;
 }
