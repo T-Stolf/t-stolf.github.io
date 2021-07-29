@@ -2,7 +2,7 @@ let display = document.querySelector("#playerHand");
 let win = document.querySelector("#win");
 let playerSum = document.querySelector("#playerSum");
 
-let playerStats = { name:"John", chips:300}
+let playerStats = {name:"John", chips:300}
 let deck = [];
 
 document.querySelector("#hold").style.display = "none";
@@ -13,31 +13,49 @@ document.querySelector("#nameTag").style.display = "none";
 document.querySelector("#userName").style.display = "none";
 document.querySelector("#userCash").style.display = "none";
 
-document.querySelector()
-
+//grabs lpayers name from the nameEnter input and sets the player name in playerStats to the input
+function nameUpdate()
+{
+    let input = document.querySelector("#nameEnter");
+    if(input.value != "Enter Name")
+    {
+        playerStats.name = input.value;
+    }
+    else
+    {
+        playerStats.name = "Player 1"
+    }
+    input.style.display = "none";
+}
 
 function startGame()
 {
-    setDeck();
-
-    player = [drawcard(), drawcard()];
-    dealer = [drawcard(), drawcard()];
-
-    document.querySelector("#userCash").textContent = playerStats.chips;
-    document.querySelector("#userName").textContent = playerStats.name;
-    
-    display.textContent = showCards(player);
-    playerSum.textContent = sum(player);
-    playerlose = false; 
-    dealerlose = false;
-    win.textContent = "";
-    //allows player to use the hold and draw buttons
-    reset();
-    //sets the players cards to green if their sum is 21
-    if(sum(player) == 21)
+    if(playerStats.chips < 10)
     {
-        document.querySelector("#yoursum").style.color = "rgb(24, 61, 7)";
-        document.querySelector("#playerSum").style.color = "rgb(24, 61, 7)";
+        alert("Sorry, You're out of chips. Please refresh the page and try again!")
+    }
+    else
+    {
+        setDeck();
+        player = [drawcard(), drawcard()];
+        dealer = [drawcard(), drawcard()];
+
+        document.querySelector("#userCash").textContent = playerStats.chips;
+        document.querySelector("#userName").textContent = playerStats.name;
+    
+        display.textContent = showCards(player);
+        playerSum.textContent = sum(player);
+        playerlose = false; 
+        dealerlose = false;
+        win.textContent = "";
+        //allows player to use the hold and draw buttons
+        reset();
+        //sets the players cards to green if their sum is 21
+        if(sum(player) == 21)
+        {
+            document.querySelector("#yoursum").style.color = "rgb(24, 61, 7)";
+            document.querySelector("#playerSum").style.color = "rgb(24, 61, 7)";
+        }
     }
 
 }

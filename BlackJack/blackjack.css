@@ -17,7 +17,7 @@ body {
     width: 90%;
 
     margin: 5% 5% 5% 5%;
-    font-size: 2.5vw;
+    font-size: min(15px, 2.5vw);
 }
 button {
 
@@ -50,9 +50,8 @@ button:hover
     grid-template-rows: auto;
     grid-template-columns: auto;
     align-content: center;
-    gap: 15px;
-    justify-content: center;
-    align-items: center;
+    justify-items:center;
+    gap: min(3%, 15px);
 }
 .title .txt
 {
@@ -68,6 +67,7 @@ button:hover
     align-items: center;
     block-size: 30vw;
     justify-content: center;
+    max-width: min(25vw, 100%);
 }
 .gamearea
 {
@@ -185,4 +185,17 @@ button:hover
     font-size: 2.5em;
     grid-area: 6 / 3 / span 1 / span 1;
     width:100%;
+}
+
+#nameEnter
+{
+    text-align: center;
+    justify-self:center;
+    align-self: center;
+    background: goldenrod;
+    color:#016f32;
+    font-size: 1.3em;
+    border:none;
+    width:100%;
+    grid-area: 3 / 3 / span 1 / span 1;
 }

@@ -10,7 +10,7 @@
 <body>
 
     <div class="title">
-        <img src="jackblack.jpg" class="jackblack"> <span class="txt"> JackBlack </span> <img src="jackblack.jpg" class="jackblack">
+        <img src="jackblack.jpg" class="jackblack"> <span class="txt"> JackBlack </span>
     </div>
 
     <div class="gamearea">
@@ -23,9 +23,10 @@
         <button id="hold" onclick="hold()">Hold
         </button> 
         <p id="win"></p>
-        <button id="start" onclick="startGame()">Start Game</button>
-        <p id="nameTag">Name:</p>
-        <p id="userName">John</p>
+        <button id="start" onclick="nameUpdate(), startGame()">Start Game</button>
+        <label id="nameTag" for="name">Name:</label>
+        <input type="text" name="name" value="Enter Name" id="nameEnter">
+        <p id="userName"></p>
         <p id="userCash">Cash</p>
     </div>
 
@@ -33,6 +34,7 @@
         <button onclick="back()">Back to Resume</button>
     </div>
     
+
 
     <script src="blackjack.js"></script>
 </body>
