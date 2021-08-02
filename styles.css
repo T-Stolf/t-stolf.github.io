@@ -4,6 +4,7 @@ css
     --background-colour: black;
 }*{
     font-family: helvetica;
+    font-size: max(1.4vw, 16px);
   }
   /* collector combinations, select for things with 2 classes or a class and an id, .header.name{} or #cube.id HTMP selectors can be used in any combination */
   /* having 2 selectors with the same properties can be written together using a comma as such .heavy, .weight{} including the comma and space*/
@@ -20,11 +21,10 @@ css
   
 body{
 
-    background: black;
+    background: rgb(21, 18, 32);
     color: white;
     font-family: Arial;
     margin: 0 0 0 0;
-    font-size: max(1.8vw, 18px);
 }
 button
 {
@@ -33,7 +33,7 @@ button
     background: none;
     color: white;
     border-radius: 5%;
-    font-size: 1em;
+    font-size: 1rem;
     transition: background 2s ease, box-shadow 2s ease;
     box-shadow: 0px 0 50px rgb(179, 179, 179),
             inset 0 0 30px rgba(150, 150, 150, 0.5);
@@ -52,19 +52,20 @@ ul
 } 
 .header
 {
-    
     position: static;
-    margin-left:min(500px, 20vw);
+    margin-left:min(20vw, 100px);
+    max-height: 300px;
 }
 .colourTransparent
 {
+    max-height: 300px;
     background-color: rgba(97, 0, 161, 0.514);
     box-shadow: 0px 0 40px rgb(140, 0, 255);
 }
 .internalStuff
 {
+    max-height: 300px;
     display: grid;
-    max-height: 1550px;
     grid-template-columns: repeat(4, 2fr); 
     grid-template-rows: 1fr 3fr 3fr 3fr 1fr;
     column-gap:min(30px, 3%);
@@ -87,7 +88,7 @@ ul
 .name
 {   
     grid-area: 2 / 3 / span 2 / span 1;
-    font-size: 1.8em;
+    font-size: max(2rem, 5vw);
     font-weight: 600;
     justify-self: start;
     align-self: center;
@@ -95,7 +96,7 @@ ul
 .occupation
 {   
     grid-area: 4 / 3 / span 1 / span 1;
-    font-size: 1em;
+    font-size:  max(1rem,2vw);
     font-weight: 600;
 
     border-top: 3px;
@@ -109,7 +110,7 @@ ul
 .mainsection
 {
     margin-top: 1%;
-    margin-left:min(500px, 20vw);
+    margin-left:min(20vw, 100px);
     display: grid;
     grid-template-columns: 1fr 7fr 1fr;
     grid-template-rows: auto;
@@ -246,7 +247,7 @@ svg
 {
     grid-area: 1 / 1 / span 1 / span 1;
 
-    font-size: 1.3em;
+    font-size: 1.3rem;
     text-align: center;
     border-bottom: 3px;
     padding-top: 1%;
@@ -265,13 +266,13 @@ svg
     position: fixed;
     padding: 0;
     margin: 0;
-    width: 20vw;
-    max-width: 500px;
+    width: min(20vw, 100px);
+    /* max-width: 300px; */
     height: 100%;
     background-color: rgba(97, 0, 161, 0.514);
     display: grid; 
-    align-items:center;
-    justify-items:space-between;
+    align-content: flex-start;
+    justify-content: center;
     box-shadow: 0 0 40px rgb(140, 0, 255);
     transition: background 2s ease, box-shadow 2s ease;
 
@@ -283,20 +284,22 @@ svg
 }
 .contactItem
 {
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    align-content: center;
-    justify-content: center;
-    height: 10vh;
-    width: 10vh;
-    max-width: 500px;
-    max-height: 500px;
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    align-items:center;
+    justify-items:center;
+    height: min(20vw, 100px);
+    width: min(20vw, 100px);
+    color:cyan;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 .contactButton
 {
     height: 70%;
     width: 70%; 
+    /* align-self: center;
+    justify-self:center; */
     border: solid 3px rgb(202, 13, 0);
     background: none;
     box-shadow: 0px 0 10px rgb(202, 13, 0),
@@ -336,7 +339,7 @@ svg
 .Type
 {
     text-decoration: underline;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     font-weight:700;
 }
 .Location
@@ -354,12 +357,12 @@ svg
 }
 ::-webkit-scrollbar
 {
-    width: 20px;
+    width: 10px;
 }
 
 ::-webkit-scrollbar-track
 {
-    background: rgb(96, 109, 121);
+    background: rgb(67, 100, 131);
     border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb
