@@ -47,7 +47,7 @@ button
     border-width: 3px;
     border-radius: 5%;
     background: rgba(148, 146, 146, 0.76);
-    font-size: 1em;
+    font-size: 1rem
     transition: background 0.5s ease;
 
 }
@@ -92,13 +92,13 @@ ul
     grid-area: 1 / 2 / span 1 / span 1;
     /* grid-area: name; */
     /* grid: 1 / 2 / span 1 /span 3; */
-    font-size: 2.5em;
+    font-size: 2.5rem;
     font-weight: 600;
 }
 .occupation
 {   
     grid-area: 2 / 2 / span 1 / span 1;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     font-weight: 600;
 
     border-top: 3px;
@@ -149,7 +149,7 @@ ul
 }
 .descriptor
 {
-    font-size: 1.3em;
+    font-size: 1.3rem;
     text-align: center;
     border-top: 0;
     border-right: 0;
@@ -177,7 +177,7 @@ ul
 }
 .contactname
 {
-    font-size: 1.3em;
+    font-size: 1.3rem;
     font-weight: 600;
 }
 .contactImg
@@ -195,7 +195,7 @@ ul
 .Type
 {
     text-decoration: underline;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     font-weight:700;
 }
 .Location
