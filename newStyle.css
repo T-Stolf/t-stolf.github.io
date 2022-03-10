@@ -1,0 +1,115 @@
+css
+:root{
+    --blue: rgb(1, 40, 77);
+    --background-colour: black;
+    
+}*{
+    font-family: helvetica;
+    box-sizing: border-box;
+  }
+body{
+    color: white;
+    display: grid;
+    padding: 10px 10px 10px 10px;
+    font-size: max(2vw, 18px);
+}
+ul{
+    list-style: none;
+}
+.backgroundColour
+{
+    background: linear-gradient(to bottom right, rgb(87, 0, 128), rgb(57, 0, 189), rgb(87, 0, 128), rgb(57, 0, 189), rgb(87, 0, 128));
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    background-position: center;
+}
+.content
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    max-width: 1000px;
+    max-height: 600px;
+   
+}
+.head
+{
+    display:grid;
+    grid-template-rows: 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    justify-items: center;
+    background: rgba(42, 38, 66, 0.911);
+    border-radius: 3%;
+    padding: 15px;
+    gap: 15px;
+    font-size: 1rem;
+}
+.meImage
+{
+    grid-area: 1 / 1 / span 3 / span 1;
+    width: 100%;
+    border-radius: 3%;
+}
+.name
+{
+    justify-self:flex-start;
+    grid-area: 1 / 2 / span 1 / span 1;
+}
+.occupation
+{
+    justify-self:flex-start;
+    grid-area: 2 / 2 / span 1 / span 1;
+}
+.headerParagraph
+{
+    justify-self:flex-start;
+    grid-area: 3 / 2 / span 1 / span 1;
+}
+.center
+{
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    justify-items: center;
+}
+.leftbar
+{
+    grid-area: 1 / 1 / span 1 / span 1;
+}
+.rightBar
+{
+    grid-area: 1 / 2 / span 1 / span 1;
+}
+
+
+
+
+
+
+
+
+
+
+::-webkit-scrollbar
+{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track
+{
+    background: rgb(67, 100, 131);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb
+{
+    background: rgb(0, 71, 202);
+    border-radius: 10px;
+    transition: background 2s ease;
+}
+::-webkit-scrollbar-thumb:hover{
+
+    background:rgb(2, 86, 241);
+}
